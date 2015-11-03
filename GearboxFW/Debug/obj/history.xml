@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM">
+      <target file="Current_Sense..o" lastModified="150cf4ccc65">
+         <source file="..\..\..\Current_Sense..cpp" lastModified="150cf29c157"/>
+      </target>
+      <target file="main.o" lastModified="150cf4ccdd7">
+         <source file="..\..\..\main.cpp" lastModified="150cf4772a4"/>
+      </target>
+      <target file="Declarations.o" lastModified="150cf4cce91">
+         <source file="..\..\..\Declarations.cpp" lastModified="150cf39f3cc"/>
+      </target>
+      <target file="power.o" lastModified="150cf4ccf62">
+         <source file="..\..\..\power.cpp" lastModified="150cf3ff067"/>
+      </target>
+   </processor>
+</history>
