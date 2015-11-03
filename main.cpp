@@ -1,17 +1,20 @@
 #include "mbed.h"
+#include "Declarations.h"
+#include "power.h"
+power_mgmt power;
 PwmOut MOT_C(PA_9);
 DigitalOut MOT_B(PA_8);
 PwmOut MOT_D(PA_10);
 DigitalOut MOT_A(PA_7);
 InterruptIn Button_P(PC_13);
 InterruptIn Button_D(PC_14);
-DigitalOut Orange(PB_0);
+//DigitalOut Orange(PB_0);
 DigitalOut myled(LED1);
 Ticker Motor;
 int go_to_sleep = 0;
 DigitalOut CSENSE_EN(PC_9);
 AnalogIn CSENSE(PC_0);
-AnalogIn VBAT(PC_1);
+//AnalogIn VBAT(PC_1);
 DigitalOut SEL1(PA_11);
 DigitalOut SEL2(PA_12);
 void run_300();
@@ -20,109 +23,23 @@ bool F = 0;
 bool R = 0;
 
 
-bool battery_status()
-{
-	double battery_level = 0.0;
-	const int on = 50;
-	const int off = 100;
-	bool low_bat = 0;
-	for(int i = 0; i < 1000; i++)
-	{
-		battery_level = battery_level + VBAT.read();
-	}
-	battery_level = battery_level/1000.0;
-	battery_level = battery_level*3.3*2.0;
-	if(battery_level >= 3.825)
-	{
-		wait_ms(250);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		low_bat = 0;
-	}
-	if(battery_level >= 3.45 && battery_level < 3.825)
-	{
-		wait_ms(250);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		low_bat = 0;
-	}
-	if(battery_level >= 3.075 && battery_level < 3.45)
-	{
-		wait_ms(250);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		low_bat = 0;
-	}
-	if(battery_level < 3.075 && battery_level >= 2.9) 
-	{
-		wait_ms(250);
-		Orange = 1;
-		wait_ms(on);
-		Orange = 0;
-		wait_ms(off);
-		low_bat = 0;
-	}
-	if(battery_level < 2.9)
-	{
-		wait_ms(250);
-		Orange = 1;
-		wait_ms(75);
-		Orange = 0;
-		wait_ms(150);
-		low_bat = 1;
-	}
-	return low_bat;
-}
+
 
 void pressed_F()
 {
     printf("Button pressed\n");
-    //battery_status();
     go_to_sleep = !go_to_sleep;
     if(go_to_sleep == 1)
     {
-    	//battery_status();
-    	//F = 0;
     	go_sleep.detach();
-    	//Orange = 0.0f;
+
     }
     if(go_to_sleep == 0)
     {
-    	if(!(battery_status()))
+    	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_F, 10.0);
     		F = 1;
-    		
     	}
 	}
 }
@@ -130,18 +47,14 @@ void pressed_F()
 void pressed_R()
 {
     printf("Button pressed\n");
-    //battery_status();
     go_to_sleep = !go_to_sleep;
     if(go_to_sleep == 1)
     {
-    	//battery_status();
-    	//R = 0;
     	go_sleep.detach();
-    	//Orange = 0.0f;
     }
     if(go_to_sleep == 0)
     {
-    	if(!(battery_status()))
+    	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_R, 10.0);
     		R = 1;
@@ -376,6 +289,7 @@ void run_4500_F()
 
 int main()
 {
+	//power_mgmt power;
     int i = 0;
     MOT_A = 0;
     MOT_B = 0;
@@ -384,7 +298,7 @@ int main()
     //Orange = 0.0f;
     Button_P.fall(&pressed_F);
     Button_D.fall(&pressed_R);
-    battery_status();
+    power.battery_status();
     MOT_C.period(0.00005);
     MOT_D.period(0.00005);
     //Orange.period(0.005);
