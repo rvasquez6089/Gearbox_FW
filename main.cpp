@@ -6,13 +6,10 @@ PwmOut MOT_C(PA_9);
 DigitalOut MOT_B(PA_8);
 PwmOut MOT_D(PA_10);
 DigitalOut MOT_A(PA_7);
-InterruptIn Button_P(PC_13);
-InterruptIn Button_D(PC_14);
 //DigitalOut Orange(PB_0);
-DigitalOut myled(LED1);
+
 Ticker Motor;
 int go_to_sleep = 0;
-DigitalOut CSENSE_EN(PC_9);
 AnalogIn CSENSE(PC_0);
 //AnalogIn VBAT(PC_1);
 DigitalOut SEL1(PA_11);

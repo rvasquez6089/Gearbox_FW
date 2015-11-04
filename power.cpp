@@ -90,3 +90,8 @@ bool power_mgmt::battery_status()
 	}
 	return low_bat;
 }
+
+void power_mgmt::sleep()
+{
+
+}

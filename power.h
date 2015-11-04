@@ -10,6 +10,7 @@ private:
 public:
 	power_mgmt();
 	bool battery_status();
+	void sleep();
 };
 //extern AnalogIn VBAT;
 
