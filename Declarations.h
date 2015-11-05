@@ -13,7 +13,7 @@ const float pwm_period = 0.00005; //F(Hz) = 1/Period    20kHz = 1/0.00005
 
 /** @brief Pin location for Orange leds MOSFET*/
 //#define pin_Orange PB_0
-/** @brief
+
 
 
 //----------LEDS-------------//
