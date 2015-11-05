@@ -12,6 +12,8 @@ private:
 
 public:
 	Motor_Ctrl();
-	void run_F(int current_lim, int correction_factor);
+	void run_F(float pulse_width);//pulse width should be between 0.0f and 1.0f
+	void run_R(float pulse_width);//pulse width should be between 0.0f and 1.0f
+	void off();
 };
 #endif //MOTOR_H

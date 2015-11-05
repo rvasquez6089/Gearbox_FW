@@ -166,6 +166,10 @@
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_gpio_ex.h"/>
       </source>
+      <source file="..\..\..\Motor.cpp" lastModified="150d587ffe2">
+         <include file="..\..\..\Motor.h"/>
+         <include file="..\..\..\Declarations.h"/>
+      </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE\objects.h" lastModified="150d0b1967f">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\cmsis.h"/>
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE\PortNames.h"/>
@@ -252,7 +256,7 @@
       <source file="..\..\..\mbed\DirHandle.h" lastModified="150d0b19a2a">
          <include file="..\..\..\mbed\FileHandle.h"/>
       </source>
-      <source file="..\..\..\Declarations.cpp" lastModified="150d0d04f8e">
+      <source file="..\..\..\Declarations.cpp" lastModified="150d513fddd">
          <include file="..\..\..\Declarations.h"/>
       </source>
       <source file="..\..\..\mbed\mbed_interface.h" lastModified="150d0b199a1">
@@ -310,7 +314,7 @@
          <include file="..\..\..\mbed\SerialBase.h"/>
          <include file="..\..\..\mbed\serial_api.h"/>
       </source>
-      <source file="..\..\..\Current_Sense.h" lastModified="150d0b320b8">
+      <source file="..\..\..\Current_Sense.h" lastModified="150d593a0a8">
          <include file="..\..\..\mbed\mbed.h"/>
       </source>
       <source file="..\..\..\mbed\rtc_time.h" lastModified="150d0b19da0">
@@ -342,6 +346,9 @@
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_flash_ex.h" lastModified="150d0b198e9">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
       </source>
+      <source file="..\..\..\Motor.h" lastModified="150d5644cb3">
+         <include file="..\..\..\mbed\mbed.h"/>
+      </source>
       <source file="..\..\..\mbed\FunctionPointer.h" lastModified="150d0b19e20">
       </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_cryp.h" lastModified="150d0b19830">
@@ -354,7 +361,7 @@
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal.h" lastModified="150d0b197f6">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_conf.h"/>
       </source>
-      <source file="..\..\..\Current_Sense..cpp" lastModified="150d0b320b5">
+      <source file="..\..\..\Current_Sense..cpp" lastModified="150d5943831">
          <include file="..\..\..\Current_Sense.h"/>
       </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_cryp_ex.h" lastModified="150d0b19832">
@@ -404,7 +411,7 @@
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\analogin_api.h"/>
       </source>
-      <source file="..\..\..\Declarations.h" lastModified="150d0d04fb0">
+      <source file="..\..\..\Declarations.h" lastModified="150d513fde6">
          <include file="..\..\..\mbed\mbed.h"/>
       </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\cmsis.h" lastModified="150d0b1979f">
@@ -440,6 +447,9 @@
       <source file="..\..\..\mbed\Stream.h" lastModified="150d0b19673">
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\FileLike.h"/>
+      </source>
+      <source file="..\..\..\power.h" lastModified="150d0ff42c1">
+         <include file="..\..\..\mbed\mbed.h"/>
       </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_eth.h" lastModified="150d0b198d2">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
@@ -587,6 +597,10 @@
       <source file="..\..\..\mbed\DigitalOut.h" lastModified="150d0b19640">
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\gpio_api.h"/>
+      </source>
+      <source file="..\..\..\power.cpp" lastModified="150d0d1155a">
+         <include file="..\..\..\power.h"/>
+         <include file="..\..\..\Declarations.h"/>
       </source>
    </includePath>
 </dependencies>

@@ -6,33 +6,26 @@ Motor_Ctrl::Motor_Ctrl() : MOT_A(PA_7), MOT_B(PA_8), MOT_C(PA_9), MOT_D(PA_10)
 
 }
 
-void Motor_Ctrl::run_F(int current_lim, int correction_factor)
+void Motor_Ctrl::run_F(float pulse_width)
 {
-
-	float current;
-	int output;
-	MOT_D = 0.0;
 	MOT_A = 0;
+	MOT_D = 0.0;
 	MOT_B = 1;
-	current = 0.0;
-	for(int i = 0; i < 10; i++)
-	{
-		current = current + CSENSE.read();
-		//wait_us(10);
-	}
-	current = current/10;
-	current  = ((current*3.3f)/100.0f)/(0.015f);
-	current = current*1000.0f;
-	output = static_cast<int>(current);
-	//pc.printf("Motor Current = %d mA\r\n",output );
+	MOT_C = pulse_width;
+}
 
-	//wait(0.001);
-	if(output >= current_lim)
-	{
-		MOT_C = MOT_C - (0.01f*(((output-current_lim)/correction_factor)));
-	}
-	if(output < current_lim)
-	{
-		MOT_C = 0.9f;
-	}
+void Motor_Ctrl::run_R(float pulse_width)
+{
+	MOT_B = 0;
+	MOT_C = 0.0;
+	MOT_A = 1;
+	MOT_D =  pulse_width;
+}
+
+void Motor_Ctrl::off()
+{
+	MOT_D = 0.0f;
+	MOT_A = 0;
+	MOT_C = 0.0f;
+	MOT_B = 0;
 }
