@@ -20,7 +20,7 @@ void Motor_Ctrl::run_R(float pulse_width)
 	MOT_B = 0;
 	MOT_C = 0.0;
 	MOT_A = 1;
-	MOT_D =  pulse_width;
+	MOT_D = pulse_width;
 }
 
 void Motor_Ctrl::off()

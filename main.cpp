@@ -7,9 +7,7 @@ Motor_Ctrl Motor;
 Current_Sense CSENSE;
 power_mgmt power(Motor, CSENSE);
 sense_gain gain;
-
 int go_to_sleep = 0;
-
 Timeout go_sleep;
 bool F = 0;
 bool R = 0;
@@ -61,16 +59,17 @@ int main()
 {
 
 	CSENSE.set_gain(G50); //Sets the current gain
-    int i = 0;
-    //Motor.shut_off();
+    Motor.off();
     Button_P.fall(&pressed_F);
     Button_D.fall(&pressed_R);
     power.battery_status();
 
     //Orange.period(0.005);
     go_to_sleep = 1;
-    while (1) {
-        if (go_to_sleep) {
+    while (1)
+    {
+        if (go_to_sleep)
+        {
             
             F = 0;
             R = 0;
@@ -79,9 +78,11 @@ int main()
             power.sleep();
             sleep();
             wait(0.1);
+            power.wake();
 
-
-        } else {
+        }
+        else
+        {
             //printf("%d: Running\n", i);
             myled = 1;
             Orange = 1;  
@@ -94,6 +95,5 @@ int main()
             	Motor.run_F(0.5);
             }
         }
-        i++;
     }
 }
