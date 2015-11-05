@@ -6,10 +6,11 @@
 class Motor_Ctrl
 {
 private:
-	PwmOut MOT_C;
-	DigitalOut MOT_B;
-	PwmOut MOT_D;
 	DigitalOut MOT_A;
+	DigitalOut MOT_B;
+	PwmOut MOT_C;
+	PwmOut MOT_D;
+
 
 public:
 	Motor_Ctrl();
