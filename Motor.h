@@ -1,6 +1,7 @@
 #ifndef MOTOR_H
 #define MOTOR_H
 #include "mbed.h"
+#include "Declarations.h"
 
 class Motor_Ctrl
 {

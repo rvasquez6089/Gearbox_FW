@@ -10,10 +10,13 @@ private:
 	DigitalOut SEL1;
 	DigitalOut SEL2;
 	DigitalOut CSENSE_EN;
+	sense_gain gain;
 public:
 	Current_Sense();
+	void init();
 	int get_current();
-	void set_gain(sense_gain gain);
+	void set_gain(sense_gain c_gain);
+	void off();
 };
 
 #endif //CURRENT_SENSE_H

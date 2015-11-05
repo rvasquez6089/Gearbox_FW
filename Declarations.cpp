@@ -1,6 +1,6 @@
 #include "Declarations.h"
 
-const float pwm_period =
+
 
 DigitalOut Orange(PB_0);
 InterruptIn Button_P(PC_13);

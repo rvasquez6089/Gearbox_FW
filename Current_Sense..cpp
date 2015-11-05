@@ -1,9 +1,15 @@
 #include "Current_Sense.h"
 
 Current_Sense::Current_Sense() : CSENSE(PC_0), SEL1(PA_11), SEL2(PA_12),
-		CSENSE_EN(PC_9)
+		CSENSE_EN(PC_9), gain(G20)
 {
 
+}
+
+void Current_Sense::init()
+{
+	CSENSE_EN = 1;
+	set_gain(gain);
 }
 
 int Current_Sense::get_current()
@@ -17,7 +23,7 @@ int Current_Sense::get_current()
 		}
 		else//Equation for SEL1=1 and SEL2=0 50V/V
 		{
-			current = static_cast<int>(1000*((CSENSE.read()*3.3f)/50.0f)/(0.015f)));
+			current = static_cast<int>(1000*(((CSENSE.read()*3.3f)/50.0f)/(0.015f)));
 		}
 	}
 	else
@@ -34,9 +40,10 @@ int Current_Sense::get_current()
 	return current;
 }
 
-void Current_Sense::set_gain(sense_gain gain)
+void Current_Sense::set_gain(sense_gain c_gain)
 {
-	switch(gain)
+	gain = c_gain;
+	switch(c_gain)
 	{
 	case G20:
 		SEL1 = 0;
@@ -55,4 +62,11 @@ void Current_Sense::set_gain(sense_gain gain)
 		SEL2 = 1;
 		break;
 	}
+}
+
+void Current_Sense::off()
+{
+	SEL1 = 0;
+	SEL2 = 0;
+	CSENSE_EN = 0;
 }

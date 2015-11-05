@@ -7,6 +7,12 @@ power_mgmt::power_mgmt() : VBAT(PC_1)
 
 }
 
+power_mgmt::power_mgmt(Motor_Ctrl &mtr, Current_Sense &csen) : VBAT(PC_1)
+{
+	Motor = &mtr;
+	CSENSE = &csen;
+}
+
 bool power_mgmt::battery_status()
 {
 	double battery_level = 0.0;
@@ -93,5 +99,12 @@ bool power_mgmt::battery_status()
 
 void power_mgmt::sleep()
 {
+	Orange = 0;
+	Motor->off();
+	CSENSE->off();
+}
 
+void power_mgmt::wake()
+{
+	CSENSE->init();
 }
