@@ -79,13 +79,15 @@ void pressed_R()
 
 int main()
 {
-
+    pc.baud(921600);
+	pc.printf("\r\n\nMMA8652 Who Am I= %X\r\n", acc.getWhoAmI());
+	pc.printf("Degrees, x, y, z, Microseconds \r\n");
 	CSENSE.set_gain(G50); //Sets the current gain
     Motor.off();
     Button_P.fall(&pressed_F);
     Button_D.fall(&pressed_R);
     power.battery_status();
-    pc.baud(921600);
+
     //Orange.period(0.005);
     go_to_sleep = 1;
     while (1)
