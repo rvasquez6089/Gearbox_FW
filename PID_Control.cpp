@@ -18,7 +18,7 @@ PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 	{
 		Angular_Spd[i] = 0.0;
 	}
-
+	Current_PWM = 0.0;
 
 }
 
@@ -43,7 +43,7 @@ void PID::Read_Acc()
 		X_data[i] = X_data[i-1];
 		Y_data[i] = Y_data[i-1];
 	}
-	Accel.ReadXYZ(acc_data);
+	Accel->ReadXYZ(acc_data);
 	////The Following lines filter the data with a low pass Filter
 	////Refer to the constants declared in PID_Control.h
 	X_data[0] = (alpha * acc_data[0]) + (1.0 - alpha) * X_data[1];
@@ -90,7 +90,7 @@ void PID::Calc_Angular_Spd()
 		Angular_Spd[i] = Angular_Spd[i-1];
 	}
 	Read_Angle();
-	Angular_Spd[i] = (Angle[0]-Angle[1])/PID_update_period;
+	Angular_Spd[0] = (Angle[0]-Angle[1])/PID_update_period;
 }
 
 void PID::Clear_Error_Buffer()
@@ -106,6 +106,7 @@ void PID::PID_Init()
 	Fill_XY_Buffer();
 	Fill_Angle_Buffer();
 	Fill_Angular_Spd_Buffer();
+	Clear_Error_Buffer();
 }
 
 void PID::Calc_Error()
@@ -115,7 +116,11 @@ void PID::Calc_Error()
 			Error[i] = Error[i-1];
 	}
 	Calc_Angular_Spd();
-	Error[0] = Trgt_Ang_Spd - Angular_Spd[0];
+	Error[0] = Angular_Spd[0] - Trgt_Ang_Spd;
+	if(Error[0] > 400.0)
+	{
+		Error[0] = 0.0;
+	}
 }
 
 float PID::Integrate_Error()
@@ -127,3 +132,46 @@ float PID::Integrate_Error()
 	}
 	return intg_error;
 }
+
+float PID::Derivate_Error()
+{
+	float der_error = 0;
+	const int Averages = 2;
+	for(int i = Averages+1;i > 1; i--)
+	{
+		der_error = der_error +
+				(Error[i] - Error[i-1])/PID_update_period;
+	}
+	der_error = der_error/static_cast<float>(Averages);
+	return der_error;
+}
+
+void PID::PID_Control()
+{
+
+	Calc_Error();
+	float New_PWM = 0.0;
+	float intg = Integrate_Error();
+	float deriv = Derivate_Error();
+	New_PWM = Current_PWM -( Kp * Error[0] +
+			Ki * intg + Kd * deriv);
+	if(New_PWM > 0.0)
+	{
+		Motor->run_F(New_PWM);
+	}
+	else
+	{
+		Motor->off();
+	}
+	if(New_PWM < 0.0)
+	{
+		New_PWM = fabsf(New_PWM);
+		Motor->run_R(New_PWM);
+	}
+	else
+	{
+		Motor->off();
+	}
+
+}
+

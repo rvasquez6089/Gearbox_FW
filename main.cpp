@@ -11,8 +11,8 @@ power_mgmt power(Motor, CSENSE);
 sense_gain gain;
 int go_to_sleep = 0;
 Timeout go_sleep;
-bool F = 0;
-bool R = 0;
+bool FF = 0;
+bool RR = 0;
 
 
 
@@ -31,7 +31,7 @@ void pressed_F()
     	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_F, 10.0);
-    		F = 1;
+    		FF = 1;
     	}
 	}
 }
@@ -49,7 +49,7 @@ void pressed_R()
     	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_R, 10.0);
-    		R = 1;
+    		RR = 1;
     		
     	}
 	}
@@ -73,8 +73,8 @@ int main()
         if (go_to_sleep)
         {
             
-            F = 0;
-            R = 0;
+            FF = 0;
+            RR = 0;
             myled = 0;
             //printf("%d: Entering sleep (press user button to resume)\n", i);
             power.sleep();
@@ -88,11 +88,11 @@ int main()
             //printf("%d: Running\n", i);
             myled = 1;
             Orange = 1;  
-            if(R && !F)
+            if(RR && !FF)
             {
             	Motor.run_R(0.5);
             }
-            if(F && !R)
+            if(FF && !RR)
             {
             	Motor.run_F(0.5);
             }

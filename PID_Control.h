@@ -5,6 +5,7 @@
 #include "Current_Sense.h"
 #include "Motor.h"
 #include "Declarations.h"
+#include <math.h>
 
 const double PI= 3.14159265;
 const float R = 4.87;
@@ -35,6 +36,7 @@ private:
 	float Angular_Spd[ANGULAR_SPEED_SZ];
 	float Error[ERROR_BUFFER_SZ];
 	float Trgt_Ang_Spd;
+	float Current_PWM;
 public:
 
 	void set_speed(float spd);
@@ -72,6 +74,10 @@ public:
 	void Calc_Error();
 
 	float Integrate_Error();
+
+	float Derivate_Error();
+
+	void PID_Control();
 };
 
 #endif
