@@ -3,6 +3,8 @@
 #include "power.h"
 #include "Motor.h"
 #include "Current_Sense.h"
+#include "PID_Control.h"
+MMA8652 Accel(PB_9, PB_8);
 Motor_Ctrl Motor;
 Current_Sense CSENSE;
 power_mgmt power(Motor, CSENSE);
