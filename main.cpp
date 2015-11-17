@@ -13,7 +13,8 @@ int go_to_sleep = 0;
 Timeout go_sleep;
 bool FF = 0;
 bool RR = 0;
-
+PID PID_Control(Motor,CSENSE, Accel, 1.0f,0.0f,0.0f,0.0f);
+Ticker PID_Call;
 
 
 
@@ -24,6 +25,8 @@ void pressed_F()
     if(go_to_sleep == 1)
     {
     	go_sleep.detach();
+    	PID_Call.detach();
+    	PID_Control.set_speed(0.0);
 
     }
     if(go_to_sleep == 0)
@@ -31,7 +34,9 @@ void pressed_F()
     	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_F, 10.0);
-    		FF = 1;
+    		PID_Control.PID_Init();
+    		PID_Control.set_speed(30.0);
+    		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
     	}
 	}
 }
@@ -43,13 +48,17 @@ void pressed_R()
     if(go_to_sleep == 1)
     {
     	go_sleep.detach();
+    	PID_Call.detach();
+    	PID_Control.set_speed(0.0);
     }
     if(go_to_sleep == 0)
     {
     	if(!(power.battery_status()))
     	{
     		go_sleep.attach(&pressed_R, 10.0);
-    		RR = 1;
+    		PID_Control.PID_Init();
+    		PID_Control.set_speed(-30.0);
+    		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
     		
     	}
 	}
@@ -88,14 +97,7 @@ int main()
             //printf("%d: Running\n", i);
             myled = 1;
             Orange = 1;  
-            if(RR && !FF)
-            {
-            	Motor.run_R(0.5);
-            }
-            if(FF && !RR)
-            {
-            	Motor.run_F(0.5);
-            }
+
         }
     }
 }

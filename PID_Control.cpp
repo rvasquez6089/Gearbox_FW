@@ -1,6 +1,8 @@
 #include "PID_Control.h"
 
 
+
+
 PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 			float kp, //Proportional Tuning Constant
 			float ki, //Integral Tuning Constant
@@ -174,4 +176,15 @@ void PID::PID_Control()
 	}
 
 }
+
+void PID::set_speed(float spd)
+{
+	Trgt_Ang_Spd  = spd;
+}
+
+float PID::get_speed()
+{
+	return Trgt_Ang_Spd;
+}
+
 

@@ -39,8 +39,7 @@ private:
 	float Current_PWM;
 public:
 
-	void set_speed(float spd);
-	float get_speed();
+
 	PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 			float kp, //Proportional Tuning Constant
 			float ki, //Integral Tuning Constant
@@ -78,6 +77,10 @@ public:
 	float Derivate_Error();
 
 	void PID_Control();
+
+	void set_speed(float spd);
+
+	float get_speed();
 };
 
 #endif
