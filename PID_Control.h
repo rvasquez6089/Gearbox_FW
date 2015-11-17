@@ -14,7 +14,9 @@ const double RC = R*C;
 const double alpha = dt / (RC + dt);
 const int XY_BUFFER_SZ = 5;
 const int ANGLE_BUFFER_SZ = 5;
-const int ANGULAR_SPEED_SZ = 50;
+const int ANGULAR_SPEED_SZ = 5;
+const int ERROR_BUFFER_SZ = 100;
+
 
 class PID
 {
@@ -30,9 +32,13 @@ private:
 	float X_data[XY_BUFFER_SZ];
 	float Y_data[XY_BUFFER_SZ];
 	float Angle[ANGLE_BUFFER_SZ];
-	float Angular_Spd[ANGULAR_SPEED_SZ]
-
+	float Angular_Spd[ANGULAR_SPEED_SZ];
+	float Error[ERROR_BUFFER_SZ];
+	float Trgt_Ang_Spd;
 public:
+
+	void set_speed(float spd);
+	float get_speed();
 	PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 			float kp, //Proportional Tuning Constant
 			float ki, //Integral Tuning Constant
@@ -55,8 +61,17 @@ public:
 	 */
 	void Read_Angle();
 	
+	void Fill_Angular_Spd_Buffer();
+
 	void Calc_Angular_Spd();
 	
+	void Clear_Error_Buffer();
+
+	void PID_Init();
+
+	void Calc_Error();
+
+	float Integrate_Error();
 };
 
 #endif

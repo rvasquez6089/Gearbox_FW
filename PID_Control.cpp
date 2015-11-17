@@ -14,6 +14,11 @@ PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 	Ki = ki;
 	Kd = kd;
 	Bias = bias;
+	for(int i = 0; i < ANGULAR_SPEED_SZ -1; i++)
+	{
+		Angular_Spd[i] = 0.0;
+	}
+
 
 }
 
@@ -25,7 +30,7 @@ void PID::Fill_XY_Buffer()
 		Accel->ReadXYZ(acc_data);
 		X_data[i] = acc_data[0];
 		Y_data[i] = acc_data[1];
-		delay_ms(5);
+		wait_ms(5);
 	}
 }
 
@@ -47,7 +52,7 @@ void PID::Read_Acc()
 
 void PID::Fill_Angle_Buffer()
 {
-	for(int i = ANGLE_BUFFER_SZ - 1; i > 0; i++)
+	for(int i = ANGLE_BUFFER_SZ - 1; i > 0; i--)
 	{
 		Angle[i] = atan2 (-1.0f*(X_data[0]),-1.0f*(Y_data[0])) * 180 / PI;
 		Read_Acc();
@@ -66,7 +71,59 @@ void PID::Read_Angle()
 	Angle[0] =  atan2 (-1.0f*(X_data[0]),-1.0f*(Y_data[0])) * 180 / PI;
 }
 
+void PID::Fill_Angular_Spd_Buffer()
+{
+	for(int i = ANGULAR_SPEED_SZ - 1; i > 0;i--)
+	{
+		Angular_Spd[i] = (Angle[0] - Angle[1])/PID_update_period;
+		Read_Angle();
+		wait_ms(5);
+	}
+}
+
+
+
 void PID::Calc_Angular_Spd()
 {
+	for(int i  = ANGULAR_SPEED_SZ - 1; i > 1; i--)
+	{
+		Angular_Spd[i] = Angular_Spd[i-1];
+	}
+	Read_Angle();
+	Angular_Spd[i] = (Angle[0]-Angle[1])/PID_update_period;
+}
 
+void PID::Clear_Error_Buffer()
+{
+	for(int i = 0; i < ERROR_BUFFER_SZ - 1; i++)
+	{
+		Error[i] = 0.0;
+	}
+}
+
+void PID::PID_Init()
+{
+	Fill_XY_Buffer();
+	Fill_Angle_Buffer();
+	Fill_Angular_Spd_Buffer();
+}
+
+void PID::Calc_Error()
+{
+	for(int i = ERROR_BUFFER_SZ - 1; i > 1; i--)
+	{
+			Error[i] = Error[i-1];
+	}
+	Calc_Angular_Spd();
+	Error[0] = Trgt_Ang_Spd - Angular_Spd[0];
+}
+
+float PID::Integrate_Error()
+{
+	float intg_error = 0;
+	for(int i = 0; i < ERROR_BUFFER_SZ - 1; i++)
+	{
+		intg_error = intg_error* (Error[i] * PID_update_period);
+	}
+	return intg_error;
 }
