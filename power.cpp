@@ -46,7 +46,7 @@ bool power_mgmt::battery_status()
 		wait_ms(off);
 		low_bat = 0;
 	}
-	if(battery_level >= 3.45 && battery_level < 3.825)
+	else if(battery_level >= 3.45 && battery_level < 3.825)
 	{
 		wait_ms(250);
 		Orange = 1;
@@ -63,7 +63,7 @@ bool power_mgmt::battery_status()
 		wait_ms(off);
 		low_bat = 0;
 	}
-	if(battery_level >= 3.075 && battery_level < 3.45)
+	else if(battery_level >= 3.075 && battery_level < 3.45)
 	{
 		wait_ms(250);
 		Orange = 1;
@@ -76,7 +76,7 @@ bool power_mgmt::battery_status()
 		wait_ms(off);
 		low_bat = 0;
 	}
-	if(battery_level < 3.075 && battery_level >= 2.9)
+	else if(battery_level < 3.075 && battery_level >= 2.9)
 	{
 		wait_ms(250);
 		Orange = 1;
@@ -85,7 +85,7 @@ bool power_mgmt::battery_status()
 		wait_ms(off);
 		low_bat = 0;
 	}
-	if(battery_level < 2.9)
+	else if(battery_level < 2.9)
 	{
 		wait_ms(250);
 		Orange = 1;

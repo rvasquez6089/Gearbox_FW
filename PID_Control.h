@@ -16,7 +16,7 @@ const double alpha = dt / (RC + dt);
 const int XY_BUFFER_SZ = 5;
 const int ANGLE_BUFFER_SZ = 5;
 const int ANGULAR_SPEED_SZ = 5;
-const int ERROR_BUFFER_SZ = 100;
+const int ERROR_BUFFER_SZ = 250;
 
 
 class PID
