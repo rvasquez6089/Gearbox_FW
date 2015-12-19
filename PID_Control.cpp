@@ -164,8 +164,8 @@ float PID::Derivate_Error()
 void PID::PID_Control()
 {
 
-	float temp;
 	Calc_Error();
+	float temp;
 	float New_PWM = 0.0;
 	float intg = Integrate_Error();
 	float deriv = Derivate_Error();
