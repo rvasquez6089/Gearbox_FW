@@ -40,7 +40,6 @@ void pressed_F()
     		PID_Control.PID_Init();
     		PID_Control.set_speed(90.0);
     		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
-    		Orange = 0.25;
     	}
 	}
 }
@@ -64,7 +63,7 @@ void pressed_R()
 
     		PID_Control.set_speed(-90.0);
     		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
-    		Orange = 0.25;
+    		
     	}
 	}
 }
@@ -73,8 +72,12 @@ void pressed_R()
 
 int main()
 {
+<<<<<<< HEAD
 	pc.baud(921600);
 	Orange.period(pwm_period);
+=======
+	pc.baud(115200);
+>>>>>>> parent of 0169bbd... Changed pin assignments
 	CSENSE.set_gain(G50); //Sets the current gain
     Motor.off();
     Button_P.fall(&pressed_F);
@@ -102,7 +105,7 @@ int main()
         {
             //printf("%d: Running\n", i);
             myled = 1;
-            //Orange = 1;
+            Orange = 1;  
 
         }
     }

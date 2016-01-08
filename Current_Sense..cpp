@@ -1,7 +1,7 @@
 #include "Current_Sense.h"
 
 Current_Sense::Current_Sense() : CSENSE(PC_0), SEL1(PA_11), SEL2(PA_12),
-		CSENSE_EN(PA_7), gain(G20)
+		CSENSE_EN(PC_9), gain(G20)
 {
 
 }
