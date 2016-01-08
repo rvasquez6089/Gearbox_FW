@@ -2935,7 +2935,11 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
 LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/system_stm32f4xx.o
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .text           0x08000000     0x83bc
+=======
+.text           0x08000000     0x8324
+>>>>>>> parent of 0169bbd... Changed pin assignments
 =======
 .text           0x08000000     0x8324
 >>>>>>> parent of 0169bbd... Changed pin assignments
@@ -3220,6 +3224,7 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
                 0x08001ef6       0x24 ..\obj\Current_Sense..o
                 0x08001ef6                Current_Sense::off()
  *fill*         0x08001f1a        0x2 
+<<<<<<< HEAD
 <<<<<<< HEAD
  .text.startup._GLOBAL__sub_I_Button_P
                 0x08001f1c       0x68 ..\obj\Declarations.o
@@ -4621,6 +4626,637 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  .text._free_r  0x08005c18       0x88 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-freer.o)
                 0x08005c18                _free_r
  .text._malloc_r
+=======
+ .text.startup._GLOBAL__sub_I_Orange
+                0x08001f1c       0x74 ..\obj\Declarations.o
+ .text._ZN7MMA8652D2Ev
+                0x08001f90        0x2 ..\obj\MMA8652.o
+                0x08001f90                MMA8652::~MMA8652()
+                0x08001f90                MMA8652::~MMA8652()
+ .text._ZN7MMA86527RegReadEcPci
+                0x08001f92       0x2c ..\obj\MMA8652.o
+                0x08001f92                MMA8652::RegRead(char, char*, int)
+ .text._ZN7MMA86525beginEv
+                0x08001fbe       0x50 ..\obj\MMA8652.o
+                0x08001fbe                MMA8652::begin()
+ .text._ZN7MMA8652C2E7PinNameS0_
+                0x0800200e       0x12 ..\obj\MMA8652.o
+                0x0800200e                MMA8652::MMA8652(PinName, PinName)
+                0x0800200e                MMA8652::MMA8652(PinName, PinName)
+ .text._ZN7MMA86527ReadXYZEPf
+                0x08002020       0x74 ..\obj\MMA8652.o
+                0x08002020                MMA8652::ReadXYZ(float*)
+ .text.gpio_write
+                0x08002094       0x2c ..\obj\Motor.o
+ .text._ZN10Motor_CtrlC2Ev
+                0x080020c0       0x5c ..\obj\Motor.o
+                0x080020c0                Motor_Ctrl::Motor_Ctrl()
+                0x080020c0                Motor_Ctrl::Motor_Ctrl()
+ .text._ZN10Motor_Ctrl5run_FEf
+                0x0800211c       0x2e ..\obj\Motor.o
+                0x0800211c                Motor_Ctrl::run_F(float)
+ .text._ZN10Motor_Ctrl5run_REf
+                0x0800214a       0x2e ..\obj\Motor.o
+                0x0800214a                Motor_Ctrl::run_R(float)
+ .text._ZN10Motor_Ctrl3offEv
+                0x08002178       0x2e ..\obj\Motor.o
+                0x08002178                Motor_Ctrl::off()
+ *fill*         0x080021a6        0x2 
+ .text._ZN3PIDC2ER10Motor_CtrlR13Current_SenseR7MMA8652ffff
+                0x080021a8       0x8c ..\obj\PID_Control.o
+                0x080021a8                PID::PID(Motor_Ctrl&, Current_Sense&, MMA8652&, float, float, float, float)
+                0x080021a8                PID::PID(Motor_Ctrl&, Current_Sense&, MMA8652&, float, float, float, float)
+ .text._ZN3PID14Fill_XY_BufferEv
+                0x08002234       0x2c ..\obj\PID_Control.o
+                0x08002234                PID::Fill_XY_Buffer()
+ .text._ZN3PID8Read_AccEv
+                0x08002260       0xa8 ..\obj\PID_Control.o
+                0x08002260                PID::Read_Acc()
+ .text._ZN3PID17Fill_Angle_BufferEv
+                0x08002308       0x6c ..\obj\PID_Control.o
+                0x08002308                PID::Fill_Angle_Buffer()
+ *fill*         0x08002374        0x4 
+ .text._ZN3PID10Read_AngleEv
+                0x08002378       0x64 ..\obj\PID_Control.o
+                0x08002378                PID::Read_Angle()
+ .text._ZN3PID23Fill_Angular_Spd_BufferEv
+                0x080023dc       0x3c ..\obj\PID_Control.o
+                0x080023dc                PID::Fill_Angular_Spd_Buffer()
+ .text._ZN3PID16Calc_Angular_SpdEv
+                0x08002418       0x38 ..\obj\PID_Control.o
+                0x08002418                PID::Calc_Angular_Spd()
+ .text._ZN3PID18Clear_Error_BufferEv
+                0x08002450       0x14 ..\obj\PID_Control.o
+                0x08002450                PID::Clear_Error_Buffer()
+ .text._ZN3PID8PID_InitEv
+                0x08002464       0x2c ..\obj\PID_Control.o
+                0x08002464                PID::PID_Init()
+ .text._ZN3PID10Calc_ErrorEv
+                0x08002490       0x5c ..\obj\PID_Control.o
+                0x08002490                PID::Calc_Error()
+ .text._ZN3PID15Integrate_ErrorEv
+                0x080024ec       0x2c ..\obj\PID_Control.o
+                0x080024ec                PID::Integrate_Error()
+ .text._ZN3PID14Derivate_ErrorEv
+                0x08002518       0x2c ..\obj\PID_Control.o
+                0x08002518                PID::Derivate_Error()
+ .text._ZN3PID11PID_ControlEv
+                0x08002544      0x10c ..\obj\PID_Control.o
+                0x08002544                PID::PID_Control()
+ .text._ZN3PID9set_speedEf
+                0x08002650        0x8 ..\obj\PID_Control.o
+                0x08002650                PID::set_speed(float)
+ .text._ZN4mbed10SerialBaseD2Ev
+                0x08002658        0x2 ..\obj\main.o
+                0x08002658                mbed::SerialBase::~SerialBase()
+                0x08002658                mbed::SerialBase::~SerialBase()
+ .text._ZN4mbed19FunctionPointerArg1IvvE12membercallerI3PIDEEvPvPj
+                0x0800265a       0x18 ..\obj\main.o
+                0x0800265a                void mbed::FunctionPointerArg1<void, void>::membercaller<PID>(void*, unsigned int*)
+ *fill*         0x08002672        0x2 
+ .text._ZN4mbed6TickerD2Ev
+                0x08002674       0x1c ..\obj\main.o
+                0x08002674                mbed::Ticker::~Ticker()
+                0x08002674                mbed::Ticker::~Ticker()
+ .text._ZN4mbed7TimeoutD2Ev
+                0x08002690       0x14 ..\obj\main.o
+                0x08002690                mbed::Timeout::~Timeout()
+                0x08002690                mbed::Timeout::~Timeout()
+ .text._ZN4mbed10SerialBaseD0Ev
+                0x080026a4        0xc ..\obj\main.o
+                0x080026a4                mbed::SerialBase::~SerialBase()
+ .text._ZN4mbed6SerialD2Ev
+                0x080026b0       0x20 ..\obj\main.o
+                0x080026b0                mbed::Serial::~Serial()
+                0x080026b0                mbed::Serial::~Serial()
+ .text._ZN4mbed6SerialD1Ev
+                0x080026d0       0x10 ..\obj\main.o
+                0x080026d0                non-virtual thunk to mbed::Serial::~Serial()
+                0x080026d8                non-virtual thunk to mbed::Serial::~Serial()
+ .text._Z9pressed_Rv
+                0x080026e0       0xa4 ..\obj\main.o
+                0x080026e0                pressed_R()
+ .text._Z9pressed_Fv
+                0x08002784       0xa4 ..\obj\main.o
+                0x08002784                pressed_F()
+ .text._ZN4mbed6TickerD0Ev
+                0x08002828       0x12 ..\obj\main.o
+                0x08002828                mbed::Ticker::~Ticker()
+ *fill*         0x0800283a        0x2 
+ .text.startup.main
+                0x0800283c       0xf0 ..\obj\main.o
+                0x0800283c                main
+ .text._ZN4mbed6SerialD0Ev
+                0x0800292c       0x1e ..\obj\main.o
+                0x0800292c                mbed::Serial::~Serial()
+                0x0800293e                non-virtual thunk to mbed::Serial::~Serial()
+                0x08002944                non-virtual thunk to mbed::Serial::~Serial()
+ .text._ZN4mbed7TimeoutD0Ev
+                0x0800294a       0x12 ..\obj\main.o
+                0x0800294a                mbed::Timeout::~Timeout()
+ .text.startup._GLOBAL__sub_I_pc
+                0x0800295c       0xf0 ..\obj\main.o
+ .text.gpio_write.constprop.0
+                0x08002a4c       0x38 ..\obj\power.o
+ .text._ZN10power_mgmtC2ER10Motor_CtrlR13Current_Sense
+                0x08002a84       0x16 ..\obj\power.o
+                0x08002a84                power_mgmt::power_mgmt(Motor_Ctrl&, Current_Sense&)
+                0x08002a84                power_mgmt::power_mgmt(Motor_Ctrl&, Current_Sense&)
+ *fill*         0x08002a9a        0x6 
+ .text._ZN10power_mgmt14battery_statusEv
+                0x08002aa0      0x1b4 ..\obj\power.o
+                0x08002aa0                power_mgmt::battery_status()
+ .text._ZN10power_mgmt5sleepEv
+                0x08002c54       0x1a ..\obj\power.o
+                0x08002c54                power_mgmt::sleep()
+ .text._ZN10power_mgmt4wakeEv
+                0x08002c6e        0x6 ..\obj\power.o
+                0x08002c6e                power_mgmt::wake()
+ .text.analogin_init
+                0x08002c74       0xb0 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(analogin_api.o)
+                0x08002c74                analogin_init
+ .text.analogin_read
+                0x08002d24       0xe4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(analogin_api.o)
+                0x08002d24                analogin_read
+ .text.pwmout_write
+                0x08002e08       0xb0 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+                0x08002e08                pwmout_write
+ .text.pwmout_period_us
+                0x08002eb8      0x138 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+                0x08002eb8                pwmout_period_us
+ .text.pwmout_init
+                0x08002ff0      0x158 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+                0x08002ff0                pwmout_init
+ .text.pwmout_period
+                0x08003148       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+                0x08003148                pwmout_period
+ .text.init_uart
+                0x08003164       0x58 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+ .text.serial_init
+                0x080031bc      0x120 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x080031bc                serial_init
+ .text.serial_baud
+                0x080032dc        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x080032dc                serial_baud
+ .text.serial_irq_handler
+                0x080032e4       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x080032e4                serial_irq_handler
+ .text.serial_getc
+                0x08003300       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x08003300                serial_getc
+ .text.serial_putc
+                0x08003318       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x08003318                serial_putc
+ .text.sleep    0x08003330       0x2c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(sleep.o)
+                0x08003330                sleep
+ .text._ZN4mbed8FilePathC2EPKc
+                0x0800335c       0x58 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x0800335c                mbed::FilePath::FilePath(char const*)
+                0x0800335c                mbed::FilePath::FilePath(char const*)
+ .text._ZN4mbed8FilePath8fileNameEv
+                0x080033b4        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x080033b4                mbed::FilePath::fileName()
+ .text._ZN4mbed8FilePath10fileSystemEv
+                0x080033b8       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x080033b8                mbed::FilePath::fileSystem()
+ .text._ZN4mbed8FilePath6isFileEv
+                0x080033d0       0x14 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x080033d0                mbed::FilePath::isFile()
+ .text._ZN4mbed8FilePath4fileEv
+                0x080033e4       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x080033e4                mbed::FilePath::file()
+ .text._ZN4mbed8FilePath6existsEv
+                0x08003400        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+                0x08003400                mbed::FilePath::exists()
+ .text._ZN4mbed3I2CC2E7PinNameS1_
+                0x0800340c       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+                0x0800340c                mbed::I2C::I2C(PinName, PinName)
+                0x0800340c                mbed::I2C::I2C(PinName, PinName)
+ .text._ZN4mbed3I2C6aquireEv
+                0x08003430       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+                0x08003430                mbed::I2C::aquire()
+ .text._ZN4mbed3I2C5writeEiPKcib
+                0x0800344c       0x34 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+                0x0800344c                mbed::I2C::write(int, char const*, int, bool)
+ .text._ZN4mbed3I2C4readEiPcib
+                0x08003480       0x34 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+                0x08003480                mbed::I2C::read(int, char*, int, bool)
+ .text._ZN4mbed11InterruptInD2Ev
+                0x080034b4       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+                0x080034b4                mbed::InterruptIn::~InterruptIn()
+                0x080034b4                mbed::InterruptIn::~InterruptIn()
+ .text._ZN4mbed11InterruptInD0Ev
+                0x080034cc       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+                0x080034cc                mbed::InterruptIn::~InterruptIn()
+ .text._ZN4mbed11InterruptIn12_irq_handlerEm14gpio_irq_event
+                0x080034e8       0x44 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+                0x080034e8                mbed::InterruptIn::_irq_handler(unsigned long, gpio_irq_event)
+ .text._ZN4mbed11InterruptInC2E7PinName
+                0x0800352c       0x44 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+                0x0800352c                mbed::InterruptIn::InterruptIn(PinName)
+                0x0800352c                mbed::InterruptIn::InterruptIn(PinName)
+ .text._ZN4mbed11InterruptIn4fallEPFvvE
+                0x08003570       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+                0x08003570                mbed::InterruptIn::fall(void (*)())
+ .text._ZN4mbed6Serial5_getcEv
+                0x0800358c        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+                0x0800358c                mbed::Serial::_getc()
+ .text._ZThn84_N4mbed6Serial5_getcEv
+                0x08003590        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+                0x08003590                non-virtual thunk to mbed::Serial::_getc()
+ .text._ZN4mbed6Serial5_putcEi
+                0x08003598        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+                0x08003598                mbed::Serial::_putc(int)
+ .text._ZThn84_N4mbed6Serial5_putcEi
+                0x0800359c        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+                0x0800359c                non-virtual thunk to mbed::Serial::_putc(int)
+ .text._ZN4mbed6SerialC2E7PinNameS1_PKc
+                0x080035a4       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+                0x080035a4                mbed::Serial::Serial(PinName, PinName, char const*)
+                0x080035a4                mbed::Serial::Serial(PinName, PinName, char const*)
+ .text._ZN4mbed10SerialBase12_irq_handlerEm9SerialIrq
+                0x080035d4       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+                0x080035d4                mbed::SerialBase::_irq_handler(unsigned long, SerialIrq)
+ .text._ZN4mbed10SerialBaseC2E7PinNameS1_
+                0x080035f8       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+                0x080035f8                mbed::SerialBase::SerialBase(PinName, PinName)
+                0x080035f8                mbed::SerialBase::SerialBase(PinName, PinName)
+ .text._ZN4mbed10SerialBase4baudEi
+                0x08003640       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+                0x08003640                mbed::SerialBase::baud(int)
+ .text._ZN4mbed10SerialBase10_base_getcEv
+                0x08003650        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+                0x08003650                mbed::SerialBase::_base_getc()
+ .text._ZN4mbed10SerialBase10_base_putcEi
+                0x08003658       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+                0x08003658                mbed::SerialBase::_base_putc(int)
+ .text._ZN4mbed6Stream5closeEv
+                0x08003668        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x08003668                mbed::Stream::close()
+ .text._ZN4mbed6Stream5writeEPKvj
+                0x0800366c       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x0800366c                mbed::Stream::write(void const*, unsigned int)
+ .text._ZN4mbed6Stream4readEPvj
+                0x0800369c       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x0800369c                mbed::Stream::read(void*, unsigned int)
+ .text._ZN4mbed6Stream5lseekEli
+                0x080036cc        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x080036cc                mbed::Stream::lseek(long, int)
+ .text._ZN4mbed6Stream6isattyEv
+                0x080036d0        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x080036d0                mbed::Stream::isatty()
+ .text._ZN4mbed6Stream5fsyncEv
+                0x080036d4        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x080036d4                mbed::Stream::fsync()
+ .text._ZN4mbed6Stream4flenEv
+                0x080036d8        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x080036d8                mbed::Stream::flen()
+ .text._ZN4mbed6StreamD2Ev
+                0x080036dc       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x080036dc                mbed::Stream::~Stream()
+                0x080036dc                mbed::Stream::~Stream()
+ .text._ZThn4_N4mbed6StreamD1Ev
+                0x08003700        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x08003700                non-virtual thunk to mbed::Stream::~Stream()
+ .text._ZN4mbed6StreamD0Ev
+                0x08003708       0x14 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x08003708                mbed::Stream::~Stream()
+ .text._ZThn4_N4mbed6StreamD0Ev
+                0x0800371c        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x0800371c                non-virtual thunk to mbed::Stream::~Stream()
+ .text._ZN4mbed6StreamC2EPKc
+                0x08003724       0x44 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x08003724                mbed::Stream::Stream(char const*)
+                0x08003724                mbed::Stream::Stream(char const*)
+ .text._ZN4mbed6Stream6printfEPKcz
+                0x08003768       0x2c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+                0x08003768                mbed::Stream::printf(char const*, ...)
+ .text._ZN4mbed6Ticker7handlerEv
+                0x08003794       0x28 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Ticker.o)
+                0x08003794                mbed::Ticker::handler()
+ .text._ZN4mbed6Ticker6detachEv
+                0x080037bc       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Ticker.o)
+                0x080037bc                mbed::Ticker::detach()
+ .text._ZN4mbed6Ticker5setupEm
+                0x080037cc       0x20 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Ticker.o)
+                0x080037cc                mbed::Ticker::setup(unsigned long)
+ .text._ZN4mbed7Timeout7handlerEv
+                0x080037ec       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Timeout.o)
+                0x080037ec                mbed::Timeout::handler()
+ .text._ZN4mbed10TimerEvent3irqEm
+                0x08003808        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x08003808                mbed::TimerEvent::irq(unsigned long)
+ .text._ZN4mbed10TimerEventD2Ev
+                0x08003814       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x08003814                mbed::TimerEvent::~TimerEvent()
+                0x08003814                mbed::TimerEvent::~TimerEvent()
+ .text._ZN4mbed10TimerEventD0Ev
+                0x0800382c       0x20 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x0800382c                mbed::TimerEvent::~TimerEvent()
+ .text._ZN4mbed10TimerEventC2Ev
+                0x0800384c       0x28 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x0800384c                mbed::TimerEvent::TimerEvent()
+                0x0800384c                mbed::TimerEvent::TimerEvent()
+ .text._ZN4mbed10TimerEvent6insertEm
+                0x08003874        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x08003874                mbed::TimerEvent::insert(unsigned long)
+ .text._ZN4mbed10TimerEvent6removeEv
+                0x08003880        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+                0x08003880                mbed::TimerEvent::remove()
+ .text.mbed_assert_internal
+                0x08003888       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(assert.o)
+                0x08003888                mbed_assert_internal
+ .text.error    0x080038a0       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(error.o)
+                0x080038a0                error
+ .text.gpio_init_in
+                0x080038c4       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio.o)
+                0x080038c4                gpio_init_in
+ .text.gpio_init_out
+                0x080038e8       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio.o)
+                0x080038e8                gpio_init_out
+ .text.pinmap_pinout
+                0x08003930       0x44 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap_common.o)
+                0x08003930                pinmap_pinout
+ .text.pinmap_merge
+                0x08003974       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap_common.o)
+                0x08003974                pinmap_merge
+ .text.pinmap_peripheral
+                0x08003998       0x34 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap_common.o)
+                0x08003998                pinmap_peripheral
+ .text.pinmap_function
+                0x080039cc       0x34 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap_common.o)
+                0x080039cc                pinmap_function
+ .text.ticker_set_handler
+                0x08003a00       0x14 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+                0x08003a00                ticker_set_handler
+ .text.ticker_irq_handler
+                0x08003a14       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+                0x08003a14                ticker_irq_handler
+ .text.ticker_insert_event
+                0x08003a5c       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+                0x08003a5c                ticker_insert_event
+ .text.ticker_remove_event
+                0x08003aa4       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+                0x08003aa4                ticker_remove_event
+ .text.ticker_read
+                0x08003aec        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+                0x08003aec                ticker_read
+ .text.get_us_ticker_data
+                0x08003af8        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker_api.o)
+                0x08003af8                get_us_ticker_data
+ .text.us_ticker_irq_handler
+                0x08003b00        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker_api.o)
+                0x08003b00                us_ticker_irq_handler
+ .text.wait_us  0x08003b0c       0x18 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(wait_api.o)
+                0x08003b0c                wait_us
+ .text.wait     0x08003b24       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(wait_api.o)
+                0x08003b24                wait
+ .text.wait_ms  0x08003b40        0xc C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(wait_api.o)
+                0x08003b40                wait_ms
+ .text.gpio_set
+                0x08003b4c       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_api.o)
+                0x08003b4c                gpio_set
+ .text.gpio_init
+                0x08003b7c       0x2c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_api.o)
+                0x08003b7c                gpio_init
+ .text.gpio_mode
+                0x08003ba8        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_api.o)
+                0x08003ba8                gpio_mode
+ .text.gpio_dir
+                0x08003bb0       0x40 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_api.o)
+                0x08003bb0                gpio_dir
+ .text.handle_interrupt_in
+                0x08003bf0       0x74 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq0
+                0x08003c64        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq1
+                0x08003c6c        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq2
+                0x08003c74        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq3
+                0x08003c7c        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq4
+                0x08003c84        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq5
+                0x08003c8c        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq6
+                0x08003c94        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .text.gpio_irq_init
+                0x08003c9c      0x154 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+                0x08003c9c                gpio_irq_init
+ .text.gpio_irq_free
+                0x08003df0       0x48 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+                0x08003df0                gpio_irq_free
+ .text.gpio_irq_set
+                0x08003e38       0x80 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+                0x08003e38                gpio_irq_set
+ .text.i2c_frequency
+                0x08003eb8       0x70 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x08003eb8                i2c_frequency
+ .text.i2c_write
+                0x08003f28       0xb8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x08003f28                i2c_write
+ .text.i2c_byte_read
+                0x08003fe0       0x38 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x08003fe0                i2c_byte_read
+ .text.i2c_read
+                0x08004018       0xb8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x08004018                i2c_read
+ .text.i2c_reset
+                0x080040d0       0x78 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x080040d0                i2c_reset
+ .text.i2c_init
+                0x08004148      0x15c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x08004148                i2c_init
+ .text.Set_GPIO_Clock
+                0x080042a4       0xec C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap.o)
+                0x080042a4                Set_GPIO_Clock
+ .text.pin_function
+                0x08004390       0x60 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap.o)
+                0x08004390                pin_function
+ .text.pin_mode
+                0x080043f0       0x50 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap.o)
+                0x080043f0                pin_mode
+ .text.us_ticker_init
+                0x08004440       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+                0x08004440                us_ticker_init
+ .text.us_ticker_read
+                0x08004464       0x1c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+                0x08004464                us_ticker_read
+ .text.us_ticker_set_interrupt
+                0x08004480       0x14 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+                0x08004480                us_ticker_set_interrupt
+ .text.us_ticker_disable_interrupt
+                0x08004494       0x14 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+                0x08004494                us_ticker_disable_interrupt
+ .text.us_ticker_clear_interrupt
+                0x080044a8       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+                0x080044a8                us_ticker_clear_interrupt
+ .text._ZN4mbed8FileBaseD2Ev
+                0x080044b8       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x080044b8                mbed::FileBase::~FileBase()
+                0x080044b8                mbed::FileBase::~FileBase()
+ .text._ZN4mbed8FileBaseD0Ev
+                0x080044e8       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x080044e8                mbed::FileBase::~FileBase()
+ .text._ZN4mbed8FileBaseC2EPKcNS_8PathTypeE
+                0x08004524       0x20 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x08004524                mbed::FileBase::FileBase(char const*, mbed::PathType)
+                0x08004524                mbed::FileBase::FileBase(char const*, mbed::PathType)
+ .text._ZN4mbed8FileBase6lookupEPKcj
+                0x08004544       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x08004544                mbed::FileBase::lookup(char const*, unsigned int)
+ .text._ZN4mbed8FileBase11getPathTypeEv
+                0x08004580        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x08004580                mbed::FileBase::getPathType()
+ .text._ZN4mbed8FileLikeD2Ev
+                0x08004584       0x24 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+                0x08004584                mbed::FileLike::~FileLike()
+                0x08004584                mbed::FileLike::~FileLike()
+ .text._ZThn4_N4mbed8FileLikeD1Ev
+                0x080045a8        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+                0x080045a8                non-virtual thunk to mbed::FileLike::~FileLike()
+ .text._ZN4mbed8FileLikeD0Ev
+                0x080045b0       0x2c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+                0x080045b0                mbed::FileLike::~FileLike()
+ .text._ZThn4_N4mbed8FileLikeD0Ev
+                0x080045dc        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+                0x080045dc                non-virtual thunk to mbed::FileLike::~FileLike()
+ .text._ZN4mbed8FileLikeC2EPKc
+                0x080045e4       0x28 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+                0x080045e4                mbed::FileLike::FileLike(char const*)
+                0x080045e4                mbed::FileLike::FileLike(char const*)
+ .text.__aeabi_atexit
+                0x0800460c        0xa c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libstdc++_nano.a(atexit_arm.o)
+                0x0800460c                __aeabi_atexit
+ .text._ZdlPv   0x08004616        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libstdc++_nano.a(del_op.o)
+                0x08004616                operator delete(void*)
+ *fill*         0x0800461a        0x2 
+ .text.atan2    0x0800461c        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-w_atan2.o)
+                0x0800461c                atan2
+ .text.__ieee754_atan2
+                0x08004620      0x204 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-e_atan2.o)
+                0x08004620                __ieee754_atan2
+ *fill*         0x08004824        0x4 
+ .text.atan     0x08004828      0x340 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_atan.o)
+                0x08004828                atan
+ .text.fabs     0x08004b68        0x8 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_fabs.o)
+                0x08004b68                fabs
+ .text          0x08004b70      0x370 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
+                0x08004b70                __aeabi_drsub
+                0x08004b78                __aeabi_dsub
+                0x08004b78                __subdf3
+                0x08004b7c                __aeabi_dadd
+                0x08004b7c                __adddf3
+                0x08004df4                __floatunsidf
+                0x08004df4                __aeabi_ui2d
+                0x08004e14                __floatsidf
+                0x08004e14                __aeabi_i2d
+                0x08004e38                __aeabi_f2d
+                0x08004e38                __extendsfdf2
+                0x08004e74                __floatundidf
+                0x08004e74                __aeabi_ul2d
+                0x08004e84                __floatdidf
+                0x08004e84                __aeabi_l2d
+ .text          0x08004ee0      0x424 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
+                0x08004ee0                __aeabi_dmul
+                0x08004ee0                __muldf3
+                0x08005134                __divdf3
+                0x08005134                __aeabi_ddiv
+ .text          0x08005304      0x110 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
+                0x08005304                __gtdf2
+                0x08005304                __gedf2
+                0x0800530c                __ltdf2
+                0x0800530c                __ledf2
+                0x08005314                __nedf2
+                0x08005314                __eqdf2
+                0x08005314                __cmpdf2
+                0x08005390                __aeabi_cdrcmple
+                0x080053a0                __aeabi_cdcmpeq
+                0x080053a0                __aeabi_cdcmple
+                0x080053b0                __aeabi_dcmpeq
+                0x080053c4                __aeabi_dcmplt
+                0x080053d8                __aeabi_dcmple
+                0x080053ec                __aeabi_dcmpge
+                0x08005400                __aeabi_dcmpgt
+ .text          0x08005414       0x50 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
+                0x08005414                __aeabi_d2iz
+                0x08005414                __fixdfsi
+ .text          0x08005464       0xa0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
+                0x08005464                __truncdfsf2
+                0x08005464                __aeabi_d2f
+ .text.__cxa_atexit
+                0x08005504       0x1c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-cxa_atexit.o)
+                0x08005504                __cxa_atexit
+ .text.__errno  0x08005520        0xc c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-errno.o)
+                0x08005520                __errno
+ .text.exit     0x0800552c       0x28 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-exit.o)
+                0x0800552c                exit
+ .text._fclose_r
+                0x08005554       0xa4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fclose.o)
+                0x08005554                _fclose_r
+ .text.fclose   0x080055f8       0x10 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fclose.o)
+                0x080055f8                fclose
+ .text.__sflush_r
+                0x08005608      0x108 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fflush.o)
+                0x08005608                __sflush_r
+ .text._fflush_r
+                0x08005710       0x54 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fflush.o)
+                0x08005710                _fflush_r
+ .text.fflush   0x08005764       0x24 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fflush.o)
+                0x08005764                fflush
+ .text._cleanup_r
+                0x08005788        0xc c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x08005788                _cleanup_r
+ .text.std.isra.0
+                0x08005794       0x48 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+ .text.__sfmoreglue
+                0x080057dc       0x2c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x080057dc                __sfmoreglue
+ .text.__sinit  0x08005808       0x60 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x08005808                __sinit
+ .text.__sfp    0x08005868       0x74 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x08005868                __sfp
+ .text.__sfp_lock_acquire
+                0x080058dc        0x2 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x080058dc                __sfp_lock_acquire
+ .text.__sfp_lock_release
+                0x080058de        0x2 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+                0x080058de                __sfp_lock_release
+ .text._fopen_r
+                0x080058e0       0x80 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fopen.o)
+                0x080058e0                _fopen_r
+ .text.fopen    0x08005960       0x14 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fopen.o)
+                0x08005960                fopen
+ .text._fseek_r
+                0x08005974        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fseek.o)
+                0x08005974                _fseek_r
+ .text._fseeko_r
+                0x08005978      0x118 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fseeko.o)
+                0x08005978                _fseeko_r
+ .text._fwalk_reent
+                0x08005a90       0x3c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fwalk.o)
+                0x08005a90                _fwalk_reent
+ .text.__libc_init_array
+                0x08005acc       0x4c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-init.o)
+                0x08005acc                __libc_init_array
+ .text.__smakebuf_r
+                0x08005b18       0x9c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-makebuf.o)
+                0x08005b18                __smakebuf_r
+ .text.malloc   0x08005bb4       0x10 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-malloc.o)
+                0x08005bb4                malloc
+ .text.free     0x08005bc4       0x10 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-malloc.o)
+                0x08005bc4                free
+ .text.memchr   0x08005bd4       0x1e c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memchr.o)
+                0x08005bd4                memchr
+ .text.memcpy   0x08005bf2       0x16 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memcpy.o)
+                0x08005bf2                memcpy
+ .text.memset   0x08005c08       0x10 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memset.o)
+                0x08005c08                memset
+ .text._free_r  0x08005c18       0x88 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-freer.o)
+                0x08005c18                _free_r
+ .text._malloc_r
+>>>>>>> parent of 0169bbd... Changed pin assignments
                 0x08005ca0       0xac c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-mallocr.o)
                 0x08005ca0                _malloc_r
  .text.__sfputc_r
@@ -4762,6 +5398,9 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  .fini          0x080075d4        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crti.o
                 0x080075d4                _fini
  .fini          0x080075d8        0x8 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtn.o
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
@@ -4775,6 +5414,7 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  *(.dtors)
  *(.rodata*)
  .rodata.str1.4
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x08007630       0x86 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/board.o
                                  0x88 (size before relaxing)
@@ -4943,6 +5583,40 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  .rodata.str1.1
                 0x08007762       0x2c ..\obj\PID_Control.o
  .rodata.str1.1
+=======
+                0x080075e0       0x86 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/board.o
+                                 0x88 (size before relaxing)
+ *fill*         0x08007666        0x2 
+ .rodata.__stdin_name
+                0x08007668        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+                0x08007668                __stdin_name
+ .rodata.__stderr_name
+                0x08007670        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+                0x08007670                __stderr_name
+ .rodata.__stdout_name
+                0x08007678        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+                0x08007678                __stdout_name
+ .rodata._ZTVN4mbed10FileHandleE
+                0x08007680       0x30 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+                0x08007680                vtable for mbed::FileHandle
+ .rodata.str1.4
+                0x080076b0        0xe C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+                                 0x10 (size before relaxing)
+ *fill*         0x080076be        0x2 
+ .rodata.APBAHBPrescTable
+                0x080076c0       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rcc.o
+                0x080076c0                APBAHBPrescTable
+ .rodata.AHBPrescTable
+                0x080076d0       0x10 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/system_stm32f4xx.o
+                0x080076d0                AHBPrescTable
+ .rodata.str1.1
+                0x080076e0       0x82 ..\obj\Current_Sense..o
+ .rodata.str1.1
+                0x00000000       0x82 ..\obj\Motor.o
+ .rodata.str1.1
+                0x08007762       0x2c ..\obj\PID_Control.o
+ .rodata.str1.1
+>>>>>>> parent of 0169bbd... Changed pin assignments
                 0x0800778e       0x10 ..\obj\main.o
                                  0x92 (size before relaxing)
  .rodata.str1.1
@@ -5048,11 +5722,15 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  .rodata.__sf_fake_stderr
                 0x08008178       0x20 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
                 0x08008178                __sf_fake_stderr
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
  .rodata.str1.1
                 0x00000000       0x10 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-impure.o)
                                   0x2 (size before relaxing)
  .rodata._global_impure_ptr
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x08008230        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-impure.o)
                 0x08008230                _global_impure_ptr
@@ -5077,16 +5755,31 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  *fill*         0x080081cf        0x1 
  .rodata        0x080081d0        0xc c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfscanf_i.o)
  .rodata.str1.1
+=======
+                0x08008198        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-impure.o)
+                0x08008198                _global_impure_ptr
+ .rodata.str1.1
+                0x0800819c       0x11 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+ .rodata.str1.1
+                0x080081ad       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ *fill*         0x080081cf        0x1 
+ .rodata        0x080081d0        0xc c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfscanf_i.o)
+ .rodata.str1.1
+>>>>>>> parent of 0169bbd... Changed pin assignments
                 0x080081dc       0x1b c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfscanf_i.o)
  .rodata._ctype_
                 0x080081f7      0x101 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-ctype_.o)
                 0x080081f7                _ctype_
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
  .rodata.str1.1
                 0x00000000       0x11 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata.str1.1
                 0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-svfscanf.o)
  *(.eh_frame*)
+<<<<<<< HEAD
 <<<<<<< HEAD
  .eh_frame      0x08008390        0x0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
  .eh_frame      0x08008390       0x28 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strcmp.o)
@@ -5124,10 +5817,30 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
 
 .iplt           0x08008324        0x0
 >>>>>>> parent of 0169bbd... Changed pin assignments
+=======
+ .eh_frame      0x080082f8        0x0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
+ .eh_frame      0x080082f8       0x28 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strcmp.o)
+ .eh_frame      0x08008320        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtend.o
+
+.glue_7         0x08008324        0x0
+ .glue_7        0x00000000        0x0 linker stubs
+
+.glue_7t        0x08008324        0x0
+ .glue_7t       0x00000000        0x0 linker stubs
+
+.vfp11_veneer   0x08008324        0x0
+ .vfp11_veneer  0x00000000        0x0 linker stubs
+
+.v4_bx          0x08008324        0x0
+ .v4_bx         0x00000000        0x0 linker stubs
+
+.iplt           0x08008324        0x0
+>>>>>>> parent of 0169bbd... Changed pin assignments
  .iplt          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x080083bc                __exidx_start = .
 
@@ -5145,6 +5858,10 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
 =======
                 0x08008324                __exidx_start = .
 
+=======
+                0x08008324                __exidx_start = .
+
+>>>>>>> parent of 0169bbd... Changed pin assignments
 .ARM.exidx      0x08008324        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
  .ARM.exidx     0x08008324        0x8 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp/crt0.o
@@ -5156,6 +5873,9 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
  .rel.iplt      0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
 
 .data           0x20000194       0x88 load address 0x0800832c
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
                 0x20000194                __data_start__ = .
                 0x20000194                _sdata = .
@@ -5200,6 +5920,7 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
                 0x2000021c                . = ALIGN (0x4)
                 0x2000021c                __data_end__ = .
                 0x2000021c                _edata = .
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 .igot.plt       0x2000021c        0x0 load address 0x0800844c
@@ -5207,10 +5928,16 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
 
 .bss            0x2000021c      0xc00 load address 0x0800844c
 =======
+=======
+
+>>>>>>> parent of 0169bbd... Changed pin assignments
 .igot.plt       0x2000021c        0x0 load address 0x080083b4
  .igot.plt      0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
 
 .bss            0x2000021c      0xbfc load address 0x080083b4
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
                 0x2000021c                . = ALIGN (0x4)
                 0x2000021c                __bss_start__ = .
@@ -5227,6 +5954,7 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
                 0x20000340                myled
  .bss.Button_P  0x20000350       0x54 ..\obj\Declarations.o
                 0x20000350                Button_P
+<<<<<<< HEAD
 <<<<<<< HEAD
  .bss.Orange    0x200003a4       0x14 ..\obj\Declarations.o
                 0x200003a4                Orange
@@ -5391,6 +6119,82 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
                 0x20000cf8        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-mallocr.o)
                 0x20000cf8                __malloc_free_list
  *(COMMON)
+=======
+ .bss.Orange    0x200003a4       0x10 ..\obj\Declarations.o
+                0x200003a4                Orange
+ .bss.Button_D  0x200003b4       0x54 ..\obj\Declarations.o
+                0x200003b4                Button_D
+ .bss.Motor     0x20000408       0x48 ..\obj\main.o
+                0x20000408                Motor
+ .bss.CSENSE    0x20000450       0x3c ..\obj\main.o
+                0x20000450                CSENSE
+ .bss.pc        0x2000048c       0x6c ..\obj\main.o
+                0x2000048c                pc
+ .bss.go_to_sleep
+                0x200004f8        0x4 ..\obj\main.o
+                0x200004f8                go_to_sleep
+ .bss.PID_Control
+                0x200004fc      0x45c ..\obj\main.o
+                0x200004fc                PID_Control
+ .bss.power     0x20000958       0x10 ..\obj\main.o
+                0x20000958                power
+ .bss.PID_Call  0x20000968       0x30 ..\obj\main.o
+                0x20000968                PID_Call
+ .bss.Accel     0x20000998        0xc ..\obj\main.o
+                0x20000998                Accel
+ .bss.RR        0x200009a4        0x1 ..\obj\main.o
+                0x200009a4                RR
+ *fill*         0x200009a5        0x3 
+ .bss.go_sleep  0x200009a8       0x30 ..\obj\main.o
+                0x200009a8                go_sleep
+ .bss.FF        0x200009d8        0x1 ..\obj\main.o
+                0x200009d8                FF
+ *fill*         0x200009d9        0x3 
+ .bss.adc_inited
+                0x200009dc        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(analogin_api.o)
+                0x200009dc                adc_inited
+ .bss.TimHandle
+                0x200009e0       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+ .bss.stdio_uart_inited
+                0x20000a1c        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+                0x20000a1c                stdio_uart_inited
+ .bss.serial_irq_ids
+                0x20000a20       0x20 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+ .bss.irq_handler
+                0x20000a40        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+ .bss.TimMasterHandle
+                0x20000a44       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(sleep.o)
+ .bss._ZN4mbed3I2C6_ownerE
+                0x20000a80        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+                0x20000a80                mbed::I2C::_owner
+ .bss.events    0x20000a84        0x8 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker_api.o)
+ .bss.channels  0x20000a8c      0x214 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .bss.irq_handler
+                0x20000ca0        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .bss.i2c1_inited
+                0x20000ca4        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x20000ca4                i2c1_inited
+ .bss.i2c3_inited
+                0x20000ca8        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x20000ca8                i2c3_inited
+ .bss.i2c2_inited
+                0x20000cac        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+                0x20000cac                i2c2_inited
+ .bss.TimMasterHandle
+                0x20000cb0       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+ .bss.us_ticker_inited
+                0x20000cec        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+ .bss._ZN4mbed8FileBase5_headE
+                0x20000cf0        0x4 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+                0x20000cf0                mbed::FileBase::_head
+ .bss.__malloc_sbrk_start
+                0x20000cf4        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000cf4                __malloc_sbrk_start
+ .bss.__malloc_free_list
+                0x20000cf8        0x4 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-mallocr.o)
+                0x20000cf8                __malloc_free_list
+ *(COMMON)
+>>>>>>> parent of 0169bbd... Changed pin assignments
  COMMON         0x20000cfc       0x3c C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/hal_tick.o
                 0x20000cfc                TimMasterHandle
  COMMON         0x20000d38       0x44 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(analogin_api.o)
@@ -5405,6 +6209,9 @@ LOAD C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN
                 0x20000e18                . = ALIGN (0x4)
                 0x20000e18                __bss_end__ = .
                 0x20000e18                _ebss = .
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
 
 .heap           0x20000e18        0x0
@@ -5434,6 +6241,7 @@ LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libnosys.a
+<<<<<<< HEAD
 START GROUP
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a
@@ -5443,12 +6251,24 @@ START GROUP
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a
 END GROUP
+=======
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a
+LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a
+END GROUP
+>>>>>>> parent of 0169bbd... Changed pin assignments
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtend.o
 LOAD c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtn.o
 OUTPUT(GearboxFW.elf elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x2e
+<<<<<<< HEAD
  .ARM.attributes
                 0x00000000       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crti.o
  .ARM.attributes
@@ -5692,6 +6512,251 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .ARM.attributes
                 0x000017da       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtend.o
  .ARM.attributes
+=======
+ .ARM.attributes
+                0x00000000       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crti.o
+ .ARM.attributes
+                0x00000022       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtbegin.o
+ .ARM.attributes
+                0x00000054       0x20 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp/crt0.o
+ .ARM.attributes
+                0x00000074       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/board.o
+ .ARM.attributes
+                0x000000ab       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/cmsis_nvic.o
+ .ARM.attributes
+                0x000000e2       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/hal_tick.o
+ .ARM.attributes
+                0x00000119       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/mbed_overrides.o
+ .ARM.attributes
+                0x00000150       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/retarget.o
+ .ARM.attributes
+                0x00000187       0x21 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/startup_stm32f401xe.o
+ .ARM.attributes
+                0x000001a8       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal.o
+ .ARM.attributes
+                0x000001df       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_adc.o
+ .ARM.attributes
+                0x00000216       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_cortex.o
+ .ARM.attributes
+                0x0000024d       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_gpio.o
+ .ARM.attributes
+                0x00000284       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_i2c.o
+ .ARM.attributes
+                0x000002bb       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_pwr.o
+ .ARM.attributes
+                0x000002f2       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_rcc.o
+ .ARM.attributes
+                0x00000329       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_tim.o
+ .ARM.attributes
+                0x00000360       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_tim_ex.o
+ .ARM.attributes
+                0x00000397       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/stm32f4xx_hal_uart.o
+ .ARM.attributes
+                0x000003ce       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM/system_stm32f4xx.o
+ .ARM.attributes
+                0x00000405       0x37 ..\obj\Current_Sense..o
+ .ARM.attributes
+                0x0000043c       0x37 ..\obj\Declarations.o
+ .ARM.attributes
+                0x00000473       0x37 ..\obj\MMA8652.o
+ .ARM.attributes
+                0x000004aa       0x37 ..\obj\Motor.o
+ .ARM.attributes
+                0x000004e1       0x37 ..\obj\PID_Control.o
+ .ARM.attributes
+                0x00000518       0x37 ..\obj\main.o
+ .ARM.attributes
+                0x0000054f       0x37 ..\obj\power.o
+ .ARM.attributes
+                0x00000586       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(analogin_api.o)
+ .ARM.attributes
+                0x000005bd       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pwmout_api.o)
+ .ARM.attributes
+                0x000005f4       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(serial_api.o)
+ .ARM.attributes
+                0x0000062b       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(sleep.o)
+ .ARM.attributes
+                0x00000662       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FilePath.o)
+ .ARM.attributes
+                0x00000699       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(I2C.o)
+ .ARM.attributes
+                0x000006d0       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(InterruptIn.o)
+ .ARM.attributes
+                0x00000707       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Serial.o)
+ .ARM.attributes
+                0x0000073e       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(SerialBase.o)
+ .ARM.attributes
+                0x00000775       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Stream.o)
+ .ARM.attributes
+                0x000007ac       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Ticker.o)
+ .ARM.attributes
+                0x000007e3       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(Timeout.o)
+ .ARM.attributes
+                0x0000081a       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(TimerEvent.o)
+ .ARM.attributes
+                0x00000851       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(assert.o)
+ .ARM.attributes
+                0x00000888       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(error.o)
+ .ARM.attributes
+                0x000008bf       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio.o)
+ .ARM.attributes
+                0x000008f6       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap_common.o)
+ .ARM.attributes
+                0x0000092d       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(ticker_api.o)
+ .ARM.attributes
+                0x00000964       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker_api.o)
+ .ARM.attributes
+                0x0000099b       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(wait_api.o)
+ .ARM.attributes
+                0x000009d2       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(PeripheralPins.o)
+ .ARM.attributes
+                0x00000a09       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_api.o)
+ .ARM.attributes
+                0x00000a40       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(gpio_irq_api.o)
+ .ARM.attributes
+                0x00000a77       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(i2c_api.o)
+ .ARM.attributes
+                0x00000aae       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(pinmap.o)
+ .ARM.attributes
+                0x00000ae5       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
+ .ARM.attributes
+                0x00000b1c       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
+ .ARM.attributes
+                0x00000b53       0x37 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+ .ARM.attributes
+                0x00000b8a       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libstdc++_nano.a(atexit_arm.o)
+ .ARM.attributes
+                0x00000bbc       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libstdc++_nano.a(del_op.o)
+ .ARM.attributes
+                0x00000bee       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-w_atan2.o)
+ .ARM.attributes
+                0x00000c20       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-e_atan2.o)
+ .ARM.attributes
+                0x00000c52       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_atan.o)
+ .ARM.attributes
+                0x00000c84       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_fabs.o)
+ .ARM.attributes
+                0x00000cb6       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x00000cd8       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x00000cfa       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_cmpdf2.o)
+ .ARM.attributes
+                0x00000d1c       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_fixdfsi.o)
+ .ARM.attributes
+                0x00000d3e       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
+ .ARM.attributes
+                0x00000d60       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-cxa_atexit.o)
+ .ARM.attributes
+                0x00000d92       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-errno.o)
+ .ARM.attributes
+                0x00000dc4       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x00000df6       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fclose.o)
+ .ARM.attributes
+                0x00000e28       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fflush.o)
+ .ARM.attributes
+                0x00000e5a       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-findfp.o)
+ .ARM.attributes
+                0x00000e8c       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fopen.o)
+ .ARM.attributes
+                0x00000ebe       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fseek.o)
+ .ARM.attributes
+                0x00000ef0       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fseeko.o)
+ .ARM.attributes
+                0x00000f22       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fwalk.o)
+ .ARM.attributes
+                0x00000f54       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x00000f86       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x00000fb8       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-makebuf.o)
+ .ARM.attributes
+                0x00000fea       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x0000101c       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x0000104e       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x00001080       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x000010b2       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x000010e4       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00001116       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfprintf.o)
+ .ARM.attributes
+                0x00001148       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x0000117a       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-vfscanf_i.o)
+ .ARM.attributes
+                0x000011ac       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-openr.o)
+ .ARM.attributes
+                0x000011de       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-printf.o)
+ .ARM.attributes
+                0x00001210       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-puts.o)
+ .ARM.attributes
+                0x00001242       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x00001274       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000012a6       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-sccl.o)
+ .ARM.attributes
+                0x000012d8       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-setbuf.o)
+ .ARM.attributes
+                0x0000130a       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-setvbuf.o)
+ .ARM.attributes
+                0x0000133c       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-sprintf.o)
+ .ARM.attributes
+                0x0000136e       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-sscanf.o)
+ .ARM.attributes
+                0x000013a0       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-stdio.o)
+ .ARM.attributes
+                0x000013d2       0x20 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strcmp.o)
+ .ARM.attributes
+                0x000013f2       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00001424       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strncmp.o)
+ .ARM.attributes
+                0x00001456       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strtol.o)
+ .ARM.attributes
+                0x00001488       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-strtoul.o)
+ .ARM.attributes
+                0x000014ba       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-ungetc.o)
+ .ARM.attributes
+                0x000014ec       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-wbuf.o)
+ .ARM.attributes
+                0x0000151e       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-writer.o)
+ .ARM.attributes
+                0x00001550       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-wsetup.o)
+ .ARM.attributes
+                0x00001582       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-closer.o)
+ .ARM.attributes
+                0x000015b4       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x000015e6       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-flags.o)
+ .ARM.attributes
+                0x00001618       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-fstatr.o)
+ .ARM.attributes
+                0x0000164a       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-isattyr.o)
+ .ARM.attributes
+                0x0000167c       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-lseekr.o)
+ .ARM.attributes
+                0x000016ae       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x000016e0       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x00001712       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00001744       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-svfscanf.o)
+ .ARM.attributes
+                0x00001776       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-readr.o)
+ .ARM.attributes
+                0x000017a8       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x000017da       0x32 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtend.o
+ .ARM.attributes
+>>>>>>> parent of 0169bbd... Changed pin assignments
                 0x0000180c       0x22 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp/crtn.o
 
 .comment        0x00000000       0xe0
@@ -5748,6 +6813,7 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .comment       0x00000000       0x71 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(us_ticker.o)
  .comment       0x00000000       0x71 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileBase.o)
  .comment       0x00000000       0x71 C:\Users\Ryan\Real Documents\Gearbox_FW/mbed/TARGET_NUCLEO_F401RE/TOOLCHAIN_GCC_ARM\libmbed.a(FileLike.o)
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 .debug_info     0x00000000     0xed0f
@@ -5806,6 +6872,36 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
 
 .debug_aranges  0x00000000      0x280
 >>>>>>> parent of 0169bbd... Changed pin assignments
+=======
+
+.debug_info     0x00000000     0xeb3d
+ .debug_info    0x00000000     0x1dfc ..\obj\Current_Sense..o
+ .debug_info    0x00001dfc     0x160b ..\obj\Declarations.o
+ .debug_info    0x00003407     0x1903 ..\obj\MMA8652.o
+ .debug_info    0x00004d0a     0x1f7c ..\obj\Motor.o
+ .debug_info    0x00006c86     0x25fe ..\obj\PID_Control.o
+ .debug_info    0x00009284     0x35d7 ..\obj\main.o
+ .debug_info    0x0000c85b     0x22e2 ..\obj\power.o
+
+.debug_abbrev   0x00000000     0x2147
+ .debug_abbrev  0x00000000      0x495 ..\obj\Current_Sense..o
+ .debug_abbrev  0x00000495      0x3c8 ..\obj\Declarations.o
+ .debug_abbrev  0x0000085d      0x40b ..\obj\MMA8652.o
+ .debug_abbrev  0x00000c68      0x44c ..\obj\Motor.o
+ .debug_abbrev  0x000010b4      0x4fa ..\obj\PID_Control.o
+ .debug_abbrev  0x000015ae      0x701 ..\obj\main.o
+ .debug_abbrev  0x00001caf      0x498 ..\obj\power.o
+
+.debug_loc      0x00000000     0x1b82
+ .debug_loc     0x00000000      0x5c1 ..\obj\Current_Sense..o
+ .debug_loc     0x000005c1      0x2f6 ..\obj\MMA8652.o
+ .debug_loc     0x000008b7      0x5b1 ..\obj\Motor.o
+ .debug_loc     0x00000e68      0x65e ..\obj\PID_Control.o
+ .debug_loc     0x000014c6      0x37d ..\obj\main.o
+ .debug_loc     0x00001843      0x33f ..\obj\power.o
+
+.debug_aranges  0x00000000      0x280
+>>>>>>> parent of 0169bbd... Changed pin assignments
  .debug_aranges
                 0x00000000       0x58 ..\obj\Current_Sense..o
  .debug_aranges
@@ -5819,6 +6915,7 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .debug_aranges
                 0x00000198       0xa0 ..\obj\main.o
  .debug_aranges
+<<<<<<< HEAD
 <<<<<<< HEAD
                 0x00000238       0x40 ..\obj\power.o
 
@@ -5842,6 +6939,10 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
 =======
                 0x00000238       0x48 ..\obj\power.o
 
+=======
+                0x00000238       0x48 ..\obj\power.o
+
+>>>>>>> parent of 0169bbd... Changed pin assignments
 .debug_ranges   0x00000000      0x618
  .debug_ranges  0x00000000       0xc0 ..\obj\Current_Sense..o
  .debug_ranges  0x000000c0       0x60 ..\obj\Declarations.o
@@ -5850,6 +6951,7 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .debug_ranges  0x000002e8       0xe0 ..\obj\PID_Control.o
  .debug_ranges  0x000003c8      0x200 ..\obj\main.o
  .debug_ranges  0x000005c8       0x50 ..\obj\power.o
+<<<<<<< HEAD
 
 .debug_line     0x00000000     0x29d1
  .debug_line    0x00000000      0x5d7 ..\obj\Current_Sense..o
@@ -5952,6 +7054,30 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .debug_frame   0x0000155c       0x2c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-readr.o)
  .debug_frame   0x00001588       0x20 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-msizer.o)
 =======
+=======
+
+.debug_line     0x00000000     0x29d1
+ .debug_line    0x00000000      0x5d7 ..\obj\Current_Sense..o
+ .debug_line    0x000005d7      0x498 ..\obj\Declarations.o
+ .debug_line    0x00000a6f      0x4b6 ..\obj\MMA8652.o
+ .debug_line    0x00000f25      0x594 ..\obj\Motor.o
+ .debug_line    0x000014b9      0x6ed ..\obj\PID_Control.o
+ .debug_line    0x00001ba6      0x7df ..\obj\main.o
+ .debug_line    0x00002385      0x64c ..\obj\power.o
+
+.debug_str      0x00000000     0x1ce4
+ .debug_str     0x00000000      0xb81 ..\obj\Current_Sense..o
+                                0xcaf (size before relaxing)
+ .debug_str     0x00000b81       0xf0 ..\obj\Declarations.o
+                                0xb49 (size before relaxing)
+ .debug_str     0x00000c71      0x22e ..\obj\MMA8652.o
+                                0xb80 (size before relaxing)
+ .debug_str     0x00000e9f      0x2b9 ..\obj\Motor.o
+                                0xd86 (size before relaxing)
+ .debug_str     0x00001158      0x374 ..\obj\PID_Control.o
+                               0x1397 (size before relaxing)
+ .debug_str     0x000014cc      0x78c ..\obj\main.o
+>>>>>>> parent of 0169bbd... Changed pin assignments
                                0x1b6a (size before relaxing)
  .debug_str     0x00001c58       0x8c ..\obj\power.o
                                 0xf94 (size before relaxing)
@@ -6021,6 +7147,9 @@ OUTPUT(GearboxFW.elf elf32-littlearm)
  .debug_frame   0x000014fc       0x70 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-svfscanf.o)
  .debug_frame   0x0000156c       0x2c c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-readr.o)
  .debug_frame   0x00001598       0x20 c:/program files (x86)/gnu tools arm embedded/4.9 2015q3/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libc_nano.a(lib_a-nano-msizer.o)
+<<<<<<< HEAD
+>>>>>>> parent of 0169bbd... Changed pin assignments
+=======
 >>>>>>> parent of 0169bbd... Changed pin assignments
 
 .stabstr        0x00000000       0x76
