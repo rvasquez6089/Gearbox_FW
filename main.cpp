@@ -15,8 +15,8 @@ Timeout go_sleep;
 bool FF = 0;
 bool RR = 0;
 
-PID PID_Control(Motor,CSENSE, Accel, 0.800f,0.80f,-20000.0f,0.0f);
-//PID PID_Control(Motor,CSENSE, Accel, 100.0f,0.0f,0.0f,0.0f); //good
+//PID PID_Control(Motor,CSENSE, Accel, 0.800f,0.80f,-20000.0f,0.0f);
+PID PID_Control(Motor,CSENSE, Accel, 0.8f,0.0f,0.0f,0.0f); //good
 Ticker PID_Call;
 
 
@@ -73,7 +73,7 @@ void pressed_R()
 
 int main()
 {
-	pc.baud(115200);
+	pc.baud(921600);
 	Orange.period(pwm_period);
 	CSENSE.set_gain(G50); //Sets the current gain
     Motor.off();
