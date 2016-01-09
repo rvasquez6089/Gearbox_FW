@@ -2,7 +2,6 @@
 <history>
    <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\.. -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents">
 <<<<<<< HEAD
-<<<<<<< HEAD
       <target file="MMA8652.o" lastModified="15223717caa">
          <source file="..\..\..\MMA8652.cpp" lastModified="1511381a4bc"/>
       </target>
@@ -22,27 +21,6 @@
          <source file="..\..\..\Declarations.cpp" lastModified="151c506e1b3"/>
       </target>
       <target file="power.o" lastModified="15223717a73">
-=======
-      <target file="Current_Sense..o" lastModified="1511b1b031e">
-         <source file="..\..\..\Current_Sense..cpp" lastModified="151137fe28e"/>
-      </target>
-      <target file="MMA8652.o" lastModified="1511b1b0857">
-         <source file="..\..\..\MMA8652.cpp" lastModified="1511381a4bc"/>
-      </target>
-      <target file="PID_Control.o" lastModified="151b8c254fa">
-         <source file="..\..\..\PID_Control.cpp" lastModified="1511b46f699"/>
-      </target>
-      <target file="Motor.o" lastModified="1511b1b093c">
-         <source file="..\..\..\Motor.cpp" lastModified="151137fe355"/>
-      </target>
-      <target file="main.o" lastModified="1511b1b0492">
-         <source file="..\..\..\main.cpp" lastModified="1511b1aff27"/>
-      </target>
-      <target file="Declarations.o" lastModified="1511b1b056e">
-         <source file="..\..\..\Declarations.cpp" lastModified="151137fe2a0"/>
-      </target>
-      <target file="power.o" lastModified="151b8c253d9">
->>>>>>> parent of 0169bbd... Changed pin assignments
 =======
       <target file="Current_Sense..o" lastModified="1511b1b031e">
          <source file="..\..\..\Current_Sense..cpp" lastModified="151137fe28e"/>
