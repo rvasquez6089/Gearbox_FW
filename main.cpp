@@ -74,8 +74,12 @@ int main()
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	pc.baud(921600);
 	Orange.period(pwm_period);
+=======
+	pc.baud(115200);
+>>>>>>> parent of 0169bbd... Changed pin assignments
 =======
 	pc.baud(115200);
 >>>>>>> parent of 0169bbd... Changed pin assignments
