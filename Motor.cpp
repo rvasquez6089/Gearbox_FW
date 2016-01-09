@@ -1,7 +1,7 @@
 #include "Motor.h"
 #include "Declarations.h"
 
-Motor_Ctrl::Motor_Ctrl() : MOT_A(PA_10), MOT_B(PC_9), MOT_C(PA_9), MOT_D(PA_8)
+Motor_Ctrl::Motor_Ctrl() : MOT_A(PA_7), MOT_B(PA_8), MOT_C(PA_9), MOT_D(PA_10)
 {
 	MOT_C.period(pwm_period);
 	MOT_D.period(pwm_period);

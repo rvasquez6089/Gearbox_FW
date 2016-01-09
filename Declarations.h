@@ -22,8 +22,7 @@ const float PID_update_period = 0.005; ////F(Hz) = 1/Period  F = 100Hz = 1/0.01
 
 
 //----------LEDS-------------//
-//extern DigitalOut Orange;
-extern PwmOut Orange;
+extern DigitalOut Orange;
 extern DigitalOut myled;
 //-----------Push Buttons-----------//
 extern InterruptIn Button_P;
