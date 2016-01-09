@@ -6,19 +6,18 @@
 <perspectiveBar/>
 <page aggregateWorkingSetId="Aggregate for window 1445751148517" focus="true" label="Workspace - CooCox CoBuilder">
 <editors>
-<editorArea activeWorkbook="DefaultEditorWorkbook">
+<editorArea activeWorkbook="org.eclipse.ui.internal.EditorStack@e24a53">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="2"/>
 <part id="1"/>
 <part id="3"/>
-<part id="2"/>
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
-<part id="8"/>
 </presentation>
 </folder>
 </info>
@@ -31,19 +30,12 @@
 <part id="1"/>
 <part id="3"/>
 <part id="4"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<<<<<<< HEAD
 <editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/main.cpp" title="main.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/main.cpp" workbook="DefaultEditorWorkbook">
-=======
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Motor.cpp" partName="Motor.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/Motor.cpp" title="Motor.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/Motor.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/Motor.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="250" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/main.cpp" title="main.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/main.cpp" workbook="DefaultEditorWorkbook">
->>>>>>> parent of 0169bbd... Changed pin assignments
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/main.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="1929"/>
 </editor>
@@ -59,11 +51,7 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE/PinNames.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="4" selectionOffset="4008" selectionTopPixel="0"/>
 </editor>
-<<<<<<< HEAD
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="PID_Control.h" partName="PID_Control.h" path="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.h" title="PID_Control.h" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.h" workbook="DefaultEditorWorkbook">
-=======
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PID_Control.h" partName="PID_Control.h" path="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.h" title="PID_Control.h" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.h" workbook="DefaultEditorWorkbook">
->>>>>>> parent of 0169bbd... Changed pin assignments
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/PID_Control.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3380" selectionTopPixel="1607"/>
 </editor>
@@ -99,7 +87,6 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/power.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="151" selectionTopPixel="0"/>
 </editor>
-<<<<<<< HEAD
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PID_Control.cpp" partName="PID_Control.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.cpp" title="PID_Control.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.cpp" workbook="org.eclipse.ui.internal.EditorStack@e24a53">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/PID_Control.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1971" selectionTopPixel="1533"/>
@@ -107,11 +94,6 @@
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Motor.cpp" partName="Motor.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/Motor.cpp" title="Motor.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/Motor.cpp" workbook="org.eclipse.ui.internal.EditorStack@e24a53">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/Motor.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-=======
-<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="PID_Control.cpp" partName="PID_Control.cpp" path="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.cpp" title="PID_Control.cpp" tooltip="C:/Users/Ryan/Real Documents/Gearbox_FW/PID_Control.cpp" workbook="org.eclipse.ui.internal.EditorStack@e24a53">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/GearboxFW/sources/PID_Control.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3500" selectionTopPixel="4991"/>
->>>>>>> parent of 0169bbd... Changed pin assignments
 </editor>
 </editors>
 <views>
@@ -126,11 +108,7 @@
 <element path="/GearboxFW/sources"/>
 </expanded>
 <selection>
-<<<<<<< HEAD
 <element path="/GearboxFW"/>
-=======
-<element path="/GearboxFW/sources/main.cpp"/>
->>>>>>> parent of 0169bbd... Changed pin assignments
 </selection>
 </viewState>
 </view>
@@ -197,8 +175,8 @@
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showMemoryBrowserAction"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showVariablesAction"/>
 <hide_menu_item_id id="org.coocox.builder.ui.openProjectExplorerAction"/>
-<hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
 <hide_menu_item_id id="org.coocox.codebugger.trace.actions.ShowTraceControlAction"/>
+<hide_menu_item_id id="org.eclipse.debug.ui.commands.TerminateAndRelaunch"/>
 <hide_menu_item_id id="org.coocox.codebugger.configuration.showRegistersAction"/>
 <hide_toolbar_item_id id="org.eclipse.cdt.debug.internal.ui.actions.ToggleInstructionStepModeAction"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
@@ -362,30 +340,12 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/PID_Control.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/PID_Control.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/PID_Control.h"/>
-<<<<<<< HEAD
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/main.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/main.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/GearboxFW/sources/main.cpp"/>
 </editors>
 <item historyLabel="PID_Control.cpp" index="0">
 <position info="not_deleted" x="1440" y="0"/>
-=======
-</editors>
-<item historyLabel="PID_Control.h" index="2">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="PID_Control.cpp" index="1">
-<position/>
-</item>
-<item historyLabel="PID_Control.h" index="2">
-<position info="not_deleted" x="181" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="0">
-<position info="not_deleted" x="726" y="0"/>
-</item>
-<item historyLabel="PID_Control.cpp" index="1">
-<position/>
->>>>>>> parent of 0169bbd... Changed pin assignments
 </item>
 <item historyLabel="PID_Control.h" index="1">
 <position info="not_deleted" x="3303" y="0"/>
@@ -519,7 +479,6 @@
 <item historyLabel="main.cpp" index="5">
 <position info="not_deleted" x="468" y="0"/>
 </item>
-<<<<<<< HEAD
 <item historyLabel="PID_Control.cpp" index="0">
 <position info="not_deleted" x="491" y="0"/>
 </item>
@@ -535,11 +494,6 @@
 <item active="true" historyLabel="PID_Control.cpp" index="0">
 <position info="not_deleted" x="3170" y="0"/>
 </item>
-=======
-<item active="true" historyLabel="PID_Control.h" index="4">
-<position info="not_deleted" x="181" y="0"/>
-</item>
->>>>>>> parent of 0169bbd... Changed pin assignments
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -547,7 +501,6 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rt_HAL_CM.h" tooltip="GearboxFW/headers/rt_HAL_CM.h">
 <persistable path="/GearboxFW/headers/rt_HAL_CM.h"/>
 </file>
@@ -589,52 +542,9 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IO_Declarations.cpp" tooltip="GearboxFW/sources/IO_Declarations.cpp">
 <persistable path="/GearboxFW/sources/IO_Declarations.cpp"/>
-=======
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MMA8652.cpp" tooltip="GearboxFW/sources/MMA8652.cpp">
-<persistable path="/GearboxFW/sources/MMA8652.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="mbed.h" tooltip="GearboxFW/headers/mbed/mbed.h">
-<persistable path="/GearboxFW/headers/mbed/mbed.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FileHandle.h" tooltip="GearboxFW/headers/mbed/FileHandle.h">
-<persistable path="/GearboxFW/headers/mbed/FileHandle.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="MMA8652.h" tooltip="GearboxFW/sources/MMA8652.h">
-<persistable path="/GearboxFW/sources/MMA8652.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PinNames.h" tooltip="GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE/PinNames.h">
-<persistable path="/GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE/PinNames.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="GearboxFW/sources/main.cpp">
-<persistable path="/GearboxFW/sources/main.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="power.cpp" tooltip="GearboxFW/sources/power.cpp">
-<persistable path="/GearboxFW/sources/power.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IO_Declarations.cpp" tooltip="C:\Users\Ryan\Real Documents\GearboxFW_coide_nucleo_f401re\GearboxFW\IO_Declarations.cpp">
-<persistable uri="file:/C:/Users/Ryan/Real%20Documents/GearboxFW_coide_nucleo_f401re/GearboxFW/IO_Declarations.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="AnalogIn.h" tooltip="GearboxFW/headers/mbed/AnalogIn.h">
-<persistable path="/GearboxFW/headers/mbed/AnalogIn.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Current_Sense..cpp" tooltip="GearboxFW/sources/Current_Sense..cpp">
-<persistable path="/GearboxFW/sources/Current_Sense..cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Current_Sense.h" tooltip="GearboxFW/sources/Current_Sense.h">
-<persistable path="/GearboxFW/sources/Current_Sense.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="IO_Declarations.cpp" tooltip="GearboxFW/sources/IO_Declarations.cpp">
-<persistable path="/GearboxFW/sources/IO_Declarations.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio_object.h" tooltip="GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h">
-<persistable path="/GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio_object.h" tooltip="GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h">
-<persistable path="/GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h"/>
->>>>>>> parent of 0169bbd... Changed pin assignments
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="gpio_object.h" tooltip="GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h">
-<persistable path="/GearboxFW/headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/gpio_object.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_hal_tim.c" tooltip="Nucleo_blink_led5/sources/mbed-src/targets/cmsis/TARGET_STM/TARGET_STM32F4/stm32f4xx_hal_tim.c">
+<persistable path="/Nucleo_blink_led5/sources/mbed-src/targets/cmsis/TARGET_STM/TARGET_STM32F4/stm32f4xx_hal_tim.c"/>
 </file>
 </mruList>
 </workbench>
