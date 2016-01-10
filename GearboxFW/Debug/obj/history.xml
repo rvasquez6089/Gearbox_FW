@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
 <<<<<<< HEAD
+<<<<<<< HEAD
    <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\.. -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents">
       <target file="MMA8652.o" lastModified="1522d50cd01">
          <source file="..\..\..\MMA8652.cpp" lastModified="1522d50baa9"/>
@@ -22,6 +23,29 @@
       </target>
       <target file="power.o" lastModified="1522cfccebb">
          <source file="..\..\..\power.cpp" lastModified="15223789b7f"/>
+=======
+   <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Engineering Projects -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox">
+      <target file="Current_Sense..o" lastModified="151bd367e35">
+         <source file="..\..\..\Current_Sense..cpp" lastModified="151bd3679df"/>
+      </target>
+      <target file="MMA8652.o" lastModified="151bd368251">
+         <source file="..\..\..\MMA8652.cpp" lastModified="15112b1ca8e"/>
+      </target>
+      <target file="PID_Control.o" lastModified="151bd41f377">
+         <source file="..\..\..\PID_Control.cpp" lastModified="151bd2f6b8f"/>
+      </target>
+      <target file="Motor.o" lastModified="151bd41f409">
+         <source file="..\..\..\Motor.cpp" lastModified="151bd37f17d"/>
+      </target>
+      <target file="main.o" lastModified="151bd4367d5">
+         <source file="..\..\..\main.cpp" lastModified="151bd435dae"/>
+      </target>
+      <target file="Declarations.o" lastModified="151bd41f208">
+         <source file="..\..\..\Declarations.cpp" lastModified="151bd41ed0f"/>
+      </target>
+      <target file="power.o" lastModified="151bd41f2a8">
+         <source file="..\..\..\power.cpp" lastModified="151bd2f6b99"/>
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
    <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Engineering Projects -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox">
       <target file="Current_Sense..o" lastModified="151bd367e35">
