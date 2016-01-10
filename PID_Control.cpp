@@ -64,7 +64,7 @@ void PID::Fill_Angle_Buffer()
 
 void PID::Read_Angle()
 {
-	//printf("Angle = %d \n", static_cast<int>(Angle[0]));
+	printf("Angle = %d ", static_cast<int>(Angle[0]));
 	for(int i = ANGLE_BUFFER_SZ - 1; i >= 1; i--)/** Shifts out the oldest data.
 		Stops at 1 so that way the 0 index is empty and ready for new data. */
 	{
@@ -88,7 +88,7 @@ void PID::Fill_Angular_Spd_Buffer()
 
 void PID::Calc_Angular_Spd()
 {
-	//printf("Angle Speed = %d\n", static_cast<int>(Angular_Spd[0]));
+	printf("Angular Speed = %d ", static_cast<int>(Angular_Spd[0]));
 	for(int i  = ANGULAR_SPEED_SZ - 1; i >= 1; i--)
 	{
 		Angular_Spd[i] = Angular_Spd[i-1];
@@ -128,6 +128,7 @@ void PID::Calc_Error()
 	Calc_Angular_Spd();
 	Error[0] = Angular_Spd[0] - Trgt_Ang_Spd;
 	if(Error[0] > 10000.0)
+
 	{
 		Error[0] = 0.0;
 	}
