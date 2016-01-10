@@ -66,7 +66,11 @@ void pressed_R()
     		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    		Orange = 0.25;
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
     		Orange = 0.25;
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"

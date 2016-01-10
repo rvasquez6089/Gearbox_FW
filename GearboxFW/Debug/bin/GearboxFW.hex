@@ -25,6 +25,7 @@
 :10017000000000000000000000000000000000007F
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 :1001800000000000B90700080000000000000000A7
 :10019000B907000810B5054C237833B9044B13B1E7
 :1001A0000448AFF300800123237010BD1C0200201F
@@ -2099,6 +2100,8 @@
 =======
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
+=======
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 :1001800000000000AD0700080000000000000000B3
 :10019000AD07000810B5054C237833B9044810B1F9
 :1001A0000448AFF300800121217010BD200200201F
@@ -4171,6 +4174,9 @@
 :1082D000182D4454FB21E93F9BF681D20B73EF3FED
 :1082E000182D4454FB21F93F00000000000000005D
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
+=======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -4179,6 +4185,7 @@
 :10831000000000000000000000000000000000005D
 :10832000000000000000000000000000000000004D
 :10833000000000000000000000000000000000003D
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 :10834000000000000000000010000000000000001D
@@ -4197,6 +4204,8 @@
 :0883FC009501000800000000DB
 :040000050800076583
 =======
+=======
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 :108340000000000000000000A0010020232D302BC1
@@ -4234,6 +4243,9 @@
 :0C8534007D2900089501000800000000EF
 :04000005080007598F
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
+=======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"

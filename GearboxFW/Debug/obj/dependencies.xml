@@ -17,9 +17,15 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\mbed\FileHandle.h" lastModified="150cfd59af0">
       </source>
       <source file="..\..\..\mbed\mbed.h" lastModified="150cfd59af0">
+=======
+      <source file="..\..\..\mbed\FileHandle.h" lastModified="150d0b19e18">
+      </source>
+      <source file="..\..\..\mbed\mbed.h" lastModified="150d0b1a166">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\mbed\FileHandle.h" lastModified="150d0b19e18">
       </source>
@@ -67,7 +73,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_dma.h" lastModified="150cfd59320">
+=======
+      <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_dma.h" lastModified="150d0b198c9">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_dma.h" lastModified="150d0b198c9">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -188,7 +198,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\Motor.cpp" lastModified="15227e06467">
+=======
+      <source file="..\..\..\Motor.cpp" lastModified="151bd37f17d">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\Motor.cpp" lastModified="151bd37f17d">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -273,6 +287,7 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\PID_Control.cpp" lastModified="1522cfcbdf2">
          <include file="..\..\..\PID_Control.h"/>
       </source>
@@ -280,11 +295,16 @@
 =======
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
+=======
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
       <source file="..\..\..\PID_Control.cpp" lastModified="151bd2f6b8f">
          <include file="..\..\..\PID_Control.h"/>
       </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_wwdg.h" lastModified="150d0b19967">
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
+=======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -302,7 +322,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\Declarations.cpp" lastModified="15227e0640e">
+=======
+      <source file="..\..\..\Declarations.cpp" lastModified="151bd41ed0f">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\Declarations.cpp" lastModified="151bd41ed0f">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -416,7 +440,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\Current_Sense..cpp" lastModified="15227e0640a">
+=======
+      <source file="..\..\..\Current_Sense..cpp" lastModified="151bd3679df">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\Current_Sense..cpp" lastModified="151bd3679df">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -474,7 +502,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\Declarations.h" lastModified="15227e06412">
+=======
+      <source file="..\..\..\Declarations.h" lastModified="151bd41ed2d">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\Declarations.h" lastModified="151bd41ed2d">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -515,7 +547,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\PID_Control.h" lastModified="1522cfcc1bc">
+=======
+      <source file="..\..\..\PID_Control.h" lastModified="151bd2f6f7b">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\PID_Control.h" lastModified="151bd2f6f7b">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -534,7 +570,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\MMA8652.cpp" lastModified="1522d50baa9">
+=======
+      <source file="..\..\..\MMA8652.cpp" lastModified="15112b1ca8e">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\MMA8652.cpp" lastModified="15112b1ca8e">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -557,7 +597,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\MMA8652.h" lastModified="1522d250f48">
+=======
+      <source file="..\..\..\MMA8652.h" lastModified="15112b1ca8e">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\MMA8652.h" lastModified="15112b1ca8e">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -674,7 +718,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\mbed\LowPowerTimeout.h" lastModified="150cfd59320">
+=======
+      <source file="..\..\..\mbed\LowPowerTimeout.h" lastModified="150d0b1965e">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\mbed\LowPowerTimeout.h" lastModified="150d0b1965e">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
@@ -716,7 +764,11 @@
       </source>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <source file="..\..\..\power.cpp" lastModified="15223789b7f">
+=======
+      <source file="..\..\..\power.cpp" lastModified="151bd2f6b99">
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
 =======
       <source file="..\..\..\power.cpp" lastModified="151bd2f6b99">
 >>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
