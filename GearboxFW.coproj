@@ -159,9 +159,9 @@
     <File name="headers/mbed/SPISlave.h" path="mbed/SPISlave.h" type="1"/>
     <File name="headers/mbed/dma_api.h" path="mbed/dma_api.h" type="1"/>
     <File name="headers/mbed/SPI.h" path="mbed/SPI.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm0plus.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm0plus.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_wwdg.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_wwdg.h" type="1"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_ltdc.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_ltdc.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm7.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm7.h" type="1"/>
     <File name="headers/mbed/Timeout.h" path="mbed/Timeout.h" type="1"/>
@@ -173,12 +173,15 @@
     <File name="headers/mbed/LocalFileSystem.h" path="mbed/LocalFileSystem.h" type="1"/>
     <File name="headers/mbed/LowPowerTicker.h" path="mbed/LowPowerTicker.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dma_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dma_ex.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32_hal_legacy.h" path="mbed/TARGET_NUCLEO_F401RE/stm32_hal_legacy.h" type="1"/>
-    <File name="headers/mbed" path="" type="2"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cortex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cortex.h" type="1"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    <File name="headers/mbed" path="" type="2"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_can.h" type="1"/>
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" type="1"/>
 >>>>>>> parent of 0169bbd... Changed pin assignments
     <File name="sources/PID_Control.cpp" path="PID_Control.cpp" type="1"/>
@@ -191,10 +194,10 @@
     <File name="headers/mbed/BusOut.h" path="mbed/BusOut.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_adc_ex.h" type="1"/>
     <File name="headers/mbed/Timer.h" path="mbed/Timer.h" type="1"/>
-    <File name="headers/mbed/port_api.h" path="mbed/port_api.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_uart.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_uart.h" type="1"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_rcc_ex.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_ca9.h" path="mbed/TARGET_NUCLEO_F401RE/core_ca9.h" type="1"/>
+    <File name="headers/mbed/port_api.h" path="mbed/port_api.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s.h" type="1"/>
     <File name="headers/mbed/semihost_api.h" path="mbed/semihost_api.h" type="1"/>
     <File name="headers/mbed/TimerEvent.h" path="mbed/TimerEvent.h" type="1"/>
@@ -204,19 +207,22 @@
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dcmi_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_dcmi_ex.h" type="1"/>
     <File name="headers/mbed/FileHandle.h" path="mbed/FileHandle.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp_ex.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm3.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm3.h" type="1"/>
     <File name="headers/mbed/toolchain.h" path="mbed/toolchain.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm0.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm0.h" type="1"/>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm3.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm3.h" type="1"/>
+>>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
     <File name="headers/mbed/pwmout_api.h" path="mbed/pwmout_api.h" type="1"/>
 >>>>>>> parent of 0169bbd... Changed pin assignments
     <File name="headers/mbed/InterruptManager.h" path="mbed/InterruptManager.h" type="1"/>
     <File name="headers/mbed/pwmout_api.h" path="mbed/pwmout_api.h" type="1"/>
     <File name="headers/mbed/ticker_api.h" path="mbed/ticker_api.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_usb.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_usb.h" type="1"/>
     <File name="headers/mbed/FileBase.h" path="mbed/FileBase.h" type="1"/>
     <File name="headers/mbed/buffer.h" path="mbed/buffer.h" type="1"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_usb.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_ll_usb.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nand.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nand.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2c_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2c_ex.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE/device.h" path="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/TARGET_NUCLEO_F401RE/device.h" type="1"/>
@@ -224,9 +230,9 @@
     <File name="headers/mbed/LowPowerTimeout.h" path="mbed/LowPowerTimeout.h" type="1"/>
     <File name="sources/Declarations.h" path="Declarations.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_gpio_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_gpio_ex.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h" type="1"/>
     <File name="sources/power.h" path="power.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_fmpi2c_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_fmpi2c_ex.h" type="1"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cryp.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_eth.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_eth.h" type="1"/>
     <File name="sources/Current_Sense.h" path="Current_Sense.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pcd_ex.h" type="1"/>
@@ -238,9 +244,9 @@
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nor.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_nor.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/PeripheralPins.h" path="mbed/TARGET_NUCLEO_F401RE/TARGET_STM/TARGET_STM32F4/PeripheralPins.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pwr.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_pwr.h" type="1"/>
-    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_smartcard.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_smartcard.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/cmsis_nvic.h" path="mbed/TARGET_NUCLEO_F401RE/cmsis_nvic.h" type="1"/>
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_sdram.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/TARGET_STM" path="" type="2"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s_ex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_i2s_ex.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_caInstr.h" path="mbed/TARGET_NUCLEO_F401RE/core_caInstr.h" type="1"/>
