@@ -177,6 +177,10 @@
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32_hal_legacy.h" path="mbed/TARGET_NUCLEO_F401RE/stm32_hal_legacy.h" type="1"/>
     <File name="headers/mbed" path="" type="2"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cortex.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_cortex.h" type="1"/>
+<<<<<<< HEAD
+=======
+    <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" type="1"/>
+>>>>>>> parent of 0169bbd... Changed pin assignments
     <File name="sources/PID_Control.cpp" path="PID_Control.cpp" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" path="mbed/TARGET_NUCLEO_F401RE/stm32f4xx_hal_hash.h" type="1"/>
     <File name="headers/mbed/DigitalInOut.h" path="mbed/DigitalInOut.h" type="1"/>
@@ -203,6 +207,10 @@
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm3.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm3.h" type="1"/>
     <File name="headers/mbed/toolchain.h" path="mbed/toolchain.h" type="1"/>
     <File name="headers/mbed/TARGET_NUCLEO_F401RE/core_cm0.h" path="mbed/TARGET_NUCLEO_F401RE/core_cm0.h" type="1"/>
+<<<<<<< HEAD
+=======
+    <File name="headers/mbed/pwmout_api.h" path="mbed/pwmout_api.h" type="1"/>
+>>>>>>> parent of 0169bbd... Changed pin assignments
     <File name="headers/mbed/InterruptManager.h" path="mbed/InterruptManager.h" type="1"/>
     <File name="headers/mbed/pwmout_api.h" path="mbed/pwmout_api.h" type="1"/>
     <File name="headers/mbed/ticker_api.h" path="mbed/ticker_api.h" type="1"/>
