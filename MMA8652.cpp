@@ -116,31 +116,4 @@ int16_t acc;
     d[2] = acc;
 }
   
-
-bool MMA8652::upright()
-{
-	bool return_var = 0;
-	float acc_data[3];
-	float averaged_z = 0;
-	const int SAMPLES = 20;
-	for(int i = 0;i < SAMPLES; i++)
-	{
-		ReadXYZ(acc_data);
-		averaged_z = averaged_z + acc_data[2];
-		wait_ms(5);
-	}
-	averaged_z = averaged_z/SAMPLES;
-	if (averaged_z > 0.35)
-	{
-		 return_var = 0;
-	}
-	else if(averaged_z < -0.35)
-	{
-		 return_var = 0;
-	}
-	else
-	{
-		 return_var = 1;
-	}
-	return return_var;
-}
+   

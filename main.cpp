@@ -64,14 +64,7 @@ void pressed_R()
 
     		PID_Control.set_speed(-90.0);
     		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    		
->>>>>>> parent of 0169bbd... Changed pin assignments
-=======
     		Orange = 0.25;
->>>>>>> parent of 8fe908a... Revert "Changed pin assignments"
     	}
 	}
 }

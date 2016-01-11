@@ -63,11 +63,6 @@ public:
    */    
     void ReadXYZraw(int16_t * d);
     char getWhoAmI(void);
-    /**
-     * upright verifies that the gearbox is in the correct orientation
-     * 1 == correct, 0 == incorrect
-     */
-    bool upright();
     
 private:
 
