@@ -217,4 +217,35 @@ float PID::get_speed()
 	return Trgt_Ang_Spd;
 }
 
+void PID::set_Trgt_Angle(float Trgt_Ang)
+{
+	Trgt_Angle = Trgt_Ang;
+}
+
+void PID::go_to_angle()
+{
+	float angular_distance;
+	angular_distance = Angle[0] - Trgt_Angle;
+	if(angular_distance >= 180.0)
+	{
+		Trgt_Ang_Spd = 15.0;
+	}
+	else if(angular_distance < -5.0 && angular_distance >= -180.0)
+	{
+		Trgt_Ang_Spd = 7.0;
+	}
+	else if(angular_distance < -180.0)
+	{
+		Trgt_Ang_Spd = -15.0;
+	}
+	else if(angular_distance > 5.0 && angular_distance < 180)
+	{
+		Trgt_Ang_Spd = -7.0;
+	}
+	else if(angular_distance <= 5 && angular_distance >= -5)
+	{
+		Trgt_Ang_Spd = 0.0;
+	}
+	PID_Control();
+}
 

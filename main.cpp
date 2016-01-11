@@ -15,7 +15,7 @@ Timeout go_sleep;
 bool FF = 0;
 bool RR = 0;
 
-PID PID_Control(Motor,CSENSE, Accel, 0.800f,0.80f,-20000.0f,0.0f);
+PID PID_Control(Motor,CSENSE, Accel, 1.500f,0.80f,-20000.0f,0.0f);
 //PID PID_Control(Motor,CSENSE, Accel, 100.0f,0.0f,0.0f,0.0f); //good
 Ticker PID_Call;
 
@@ -62,11 +62,13 @@ void pressed_R()
     {
     	if(!(power.battery_status()))
     	{
-    		go_sleep.attach(&pressed_R, 10.0);
+    		go_sleep.attach(&pressed_R, 30.0);
     		PID_Control.PID_Init();
 
-    		PID_Control.set_speed(-90.0);
-    		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
+    		PID_Control.set_Trgt_Angle(180.0);
+
+    		//PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
+    		PID_Call.attach(&PID_Control, &PID::go_to_angle, PID_update_period);
     		Orange = 0.25;
     	}
 	}

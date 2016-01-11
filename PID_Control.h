@@ -37,6 +37,7 @@ private:
 	float Error[ERROR_BUFFER_SZ];
 	float Trgt_Ang_Spd;
 	float Current_PWM;
+	float Trgt_Angle;
 public:
 
 
@@ -115,7 +116,7 @@ public:
 
 
 	/**Derivate_Error calculates the derivative of the error over a set
-	 * number of error sampels and returns a float of the change
+	 * number of error samples and returns a float of the change
 	 * in error over those samples.
 	 */
 	float Derivate_Error();
@@ -132,6 +133,10 @@ public:
 	void set_speed(float spd);
 
 	float get_speed();
+
+	void set_Trgt_Angle(float Trgt_Ang);
+
+	void go_to_angle();
 };
 
 #endif
