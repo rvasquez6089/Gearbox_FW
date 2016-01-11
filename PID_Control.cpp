@@ -54,9 +54,12 @@ void PID::Read_Acc()
 
 void PID::Fill_Angle_Buffer()
 {
+	float Temp_Ang;
 	for(int i = ANGLE_BUFFER_SZ - 1; i > 0; i--)
 	{
-		Angle[i] = atan2 (-1.0f*(Y_data[0]),-1.0f*(X_data[0])) * 180 / PI;
+		//Angle[i] = atan2 (-1.0f*(Y_data[0]),-1.0f*(X_data[0])) * 180 / PI;
+		Temp_Ang = atan2 (X_data[0],Y_data[0]) * 180 / PI;
+		Angle[i] = fmod((Temp_Ang + 360.0),360.0);
 		Read_Acc();
 		wait_ms(5);
 	}
@@ -64,14 +67,17 @@ void PID::Fill_Angle_Buffer()
 
 void PID::Read_Angle()
 {
-	//printf("Angle = %d \n", static_cast<int>(Angle[0]));
+	float Temp_Ang;
+	printf("Ang=%d ", static_cast<int>(Angle[0]));
 	for(int i = ANGLE_BUFFER_SZ - 1; i >= 1; i--)/** Shifts out the oldest data.
 		Stops at 1 so that way the 0 index is empty and ready for new data. */
 	{
 		Angle[i] = Angle[i-1];
 	}
 	Read_Acc();////Refresh X_data and Y_data
-	Angle[0] =  atan2 (-1.0f*(Y_data[0]),-1.0f*(X_data[0])) * 180 / PI;
+	//Angle[0] =  atan2 (-1.0f*(Y_data[0]),-1.0f*(X_data[0])) * 180 / PI;
+	Temp_Ang = atan2 (X_data[0],Y_data[0]) * 180 / PI;
+	Angle[0] = fmod((Temp_Ang + 360.0),360.0);
 }
 
 void PID::Fill_Angular_Spd_Buffer()
@@ -88,7 +94,7 @@ void PID::Fill_Angular_Spd_Buffer()
 
 void PID::Calc_Angular_Spd()
 {
-	//printf("Angle Speed = %d\n", static_cast<int>(Angular_Spd[0]));
+	printf("AngSpd = %d ", static_cast<int>(Angular_Spd[0]));
 	for(int i  = ANGULAR_SPEED_SZ - 1; i >= 1; i--)
 	{
 		Angular_Spd[i] = Angular_Spd[i-1];
@@ -126,7 +132,8 @@ void PID::Calc_Error()
 			Error[i] = Error[i-1];
 	}
 	Calc_Angular_Spd();
-	Error[0] = Angular_Spd[0] - Trgt_Ang_Spd;
+	//Error[0] = Angular_Spd[0] - Trgt_Ang_Spd;
+	Error[0] = Trgt_Ang_Spd - Angular_Spd[0];
 	if(Error[0] > 10000.0)
 	{
 		Error[0] = 0.0;
@@ -169,7 +176,7 @@ void PID::PID_Control()
 	float New_PWM = 0.0;
 	float intg = Integrate_Error();
 	float deriv = Derivate_Error();
-	New_PWM = Current_PWM - (( Kp * Error[0] +
+	New_PWM = Current_PWM + (( Kp * Error[0] +
 			Ki * intg + Kd * deriv + Bias)*PID_update_period);
 	if(New_PWM > 1.0f)
 	{
@@ -183,18 +190,18 @@ void PID::PID_Control()
 	printf("PWM = %d  ",static_cast<int>(New_PWM*1000.0));
 	if(New_PWM > 0.0f)
 	{
-		printf("Motor R \n");
+		printf("Motor F \n");
 		Current_PWM = New_PWM;
-		Motor->run_R(New_PWM);
+		Motor->run_F(New_PWM);
 	}
 	else if(New_PWM < 0.0f)
 	{
-		printf("Motor F \n");
+		printf("Motor R \n");
 
 
 		Current_PWM = New_PWM;
 		temp = fabsf(New_PWM);
-		Motor->run_F(temp);
+		Motor->run_R(temp);
 	}
 
 
