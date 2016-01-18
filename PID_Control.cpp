@@ -13,8 +13,8 @@ PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 	CSENSE = &csen;
 	Accel = &acc;
 	Kp = kp*PID_update_period;
-	Ki = (ki*PID_update_period*625)/250;
-	Kd = (kd*0.01)/PID_update_period;
+	Ki = ((ki*PID_update_period*625)/ERROR_BUFFER_SZ)*100000.0;
+	Kd = (kd*0.00000001)/PID_update_period;
 	Bias = bias;
 	for(int i = 0; i < ANGULAR_SPEED_SZ -1; i++)
 	{
@@ -32,7 +32,7 @@ void PID::Fill_XY_Buffer()
 		Accel->ReadXYZ(acc_data);
 		X_data[i] = acc_data[0];
 		Y_data[i] = acc_data[1];
-		wait_ms(5);
+		wait(PID_update_period);
 	}
 }
 
@@ -61,7 +61,7 @@ void PID::Fill_Angle_Buffer()
 		Temp_Ang = atan2 (X_data[0],Y_data[0]) * 180 / PI;
 		Angle[i] = fmod((Temp_Ang + 360.0),360.0);
 		Read_Acc();
-		wait_ms(5);
+		wait(PID_update_period);
 	}
 }
 
@@ -86,7 +86,7 @@ void PID::Fill_Angular_Spd_Buffer()
 	{
 		Angular_Spd[i] = (Angle[0] - Angle[1])/PID_update_period;
 		Read_Angle();
-		wait_ms(5);
+		wait(PID_update_period);
 	}
 }
 
@@ -114,10 +114,11 @@ void PID::Clear_Error_Buffer()
 
 void PID::PID_Init()
 {
+	Clear_All_Buffers();
 	Fill_XY_Buffer();
 	Fill_Angle_Buffer();
 	Fill_Angular_Spd_Buffer();
-	Clear_Error_Buffer();
+
 	for(int i = 0; i < ANGULAR_SPEED_SZ -1; i++)
 	{
 		Angular_Spd[i] = 0.0;
@@ -127,22 +128,24 @@ void PID::PID_Init()
 
 void PID::Calc_Error()
 {
+	float temp_error;
 	for(int i = ERROR_BUFFER_SZ - 1; i > 1; i--)
 	{
 			Error[i] = Error[i-1];
 	}
 	Calc_Angular_Spd();
 	//Error[0] = Angular_Spd[0] - Trgt_Ang_Spd;
-	Error[0] = Trgt_Ang_Spd - Angular_Spd[0];
-	if(Error[0] > 10000.0)
+	temp_error = Trgt_Ang_Spd - Angular_Spd[0];
+	if(temp_error > 1000.0)
 	{
-		Error[0] = 0.0;
+		temp_error = 0.0;
 	}
-	else if(Error[0] < -10000.0)
+	else if(temp_error < -1000.0)
 	{
-		Error[0] = 0.0;
+		temp_error = 0.0;
 	}
-
+	Error[0] = (0.95  * temp_error) + (1.0 - 0.95) * Error[1];
+	//Error[0] = temp_error;
 }
 
 float PID::Integrate_Error()
@@ -157,13 +160,15 @@ float PID::Integrate_Error()
 
 float PID::Derivate_Error()
 {
-	float der_error = 0;
-	const int Averages = 1;
-	for(int i = Averages+1;i > 1; i--)
+	float der_error = 0.0;
+	const int Averages = 2;
+	for(int i = 0;i < Averages; i++)
 	{
 		der_error = der_error +
-				(Error[i] - Error[i-1])/PID_update_period;
+				(Error[i] - Error[i+1])/PID_update_period;
 	}
+	//der_error = (Error[i] - Error[i-1])/PID_update_period;
+
 	der_error = der_error/static_cast<float>(Averages);
 	return der_error;
 }
@@ -178,6 +183,8 @@ void PID::PID_Control()
 	float deriv = Derivate_Error();
 	New_PWM = Current_PWM + (( Kp * Error[0] +
 			Ki * intg + Kd * deriv + Bias)*PID_update_period);
+	printf("intg=%d ", static_cast<int>(intg*1000.0));
+	printf("deriv=%d ", static_cast<int>(deriv*1000.0));
 	if(New_PWM > 1.0f)
 	{
 		New_PWM = 1.0f;
@@ -224,28 +231,63 @@ void PID::set_Trgt_Angle(float Trgt_Ang)
 
 void PID::go_to_angle()
 {
+	//static bool brake;
 	float angular_distance;
 	angular_distance = Angle[0] - Trgt_Angle;
 	if(angular_distance >= 180.0)
 	{
-		Trgt_Ang_Spd = 15.0;
+		Trgt_Ang_Spd = 45.0;
 	}
-	else if(angular_distance < -5.0 && angular_distance >= -180.0)
+	else if(angular_distance < -20.0 && angular_distance >= -180.0)
 	{
-		Trgt_Ang_Spd = 7.0;
+		Trgt_Ang_Spd = 45.0;
 	}
 	else if(angular_distance < -180.0)
 	{
-		Trgt_Ang_Spd = -15.0;
+		Trgt_Ang_Spd = -45.0;
 	}
-	else if(angular_distance > 5.0 && angular_distance < 180)
+	else if(angular_distance > 20.0 && angular_distance < 180)
 	{
-		Trgt_Ang_Spd = -7.0;
+		Trgt_Ang_Spd = -45.0;
 	}
-	else if(angular_distance <= 5 && angular_distance >= -5)
+	else if(angular_distance <= 20 && angular_distance >= -20)
 	{
+
 		Trgt_Ang_Spd = 0.0;
+		/*if(brake)
+		{
+			Trgt_Ang_Spd = 0.0;
+			brake = !brake;
+		}
+		else
+		{
+			Trgt_Ang_Spd = 0.0;
+			brake = !brake;
+		}*/
+
 	}
 	PID_Control();
 }
 
+void PID::Clear_All_Buffers()
+{
+	for(int i = 0; i < ERROR_BUFFER_SZ - 1; i++)
+	{
+		Error[i] = 0.0;
+	}
+	for(int i = 0; i < XY_BUFFER_SZ - 1; i++)
+	{
+		X_data[i] = 0.0;
+		Y_data[i] = 0.0;
+	}
+	for(int i = 0; i < ANGLE_BUFFER_SZ - 1; i++)
+	{
+		Angle[i] = 0.0;
+	}
+	for(int i = 0; i < ANGULAR_SPEED_SZ - 1; i++)
+	{
+		Angular_Spd[i] = 0.0;
+	}
+
+
+}

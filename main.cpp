@@ -15,7 +15,7 @@ Timeout go_sleep;
 bool FF = 0;
 bool RR = 0;
 
-PID PID_Control(Motor,CSENSE, Accel, 1.500f,0.80f,-20000.0f,0.0f);
+PID PID_Control(Motor,CSENSE, Accel, 2.800f,0.80f,2.0f,0.0f);
 //PID PID_Control(Motor,CSENSE, Accel, 100.0f,0.0f,0.0f,0.0f); //good
 Ticker PID_Call;
 
