@@ -12,78 +12,36 @@ power_mgmt power(Motor, CSENSE);
 sense_gain gain;
 int go_to_sleep = 0;
 Timeout go_sleep;
+Timeout go_home;
 bool FF = 0;
 bool RR = 0;
+bool running = 0;
 
-PID PID_Control(Motor,CSENSE, Accel, 2.800f,0.80f,2.0f,0.0f);
+PID PID_Control(Motor,CSENSE, Accel, 0.80f,0.50f,0.000000000000000001f,0.0f);
 //PID PID_Control(Motor,CSENSE, Accel, 100.0f,0.0f,0.0f,0.0f); //good
 Ticker PID_Call;
 
+void pressed_CW();
 
+void pressed_CCW();
 
-void pressed_F()
-{
-    pc.printf("Button pressed\n");
-    go_to_sleep = !go_to_sleep;
-    if(go_to_sleep == 1)
-    {
-    	go_sleep.detach();
-    	PID_Call.detach();
-    	PID_Control.set_speed(0.0);
+void sleep_init();
 
-    }
-    else if(go_to_sleep == 0)
-    {
-    	if(!(power.battery_status()))
-    	{
-    		if(Accel.upright())
-    		{
-    			go_sleep.attach(&pressed_F, 10.0);
-    			PID_Control.PID_Init();
-				PID_Control.set_speed(90.0);
-				PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
-				Orange = 0.25;
-    		}
-    	}
-	}
-}
+void set_to_sleep();
 
-void pressed_R()
-{
-    pc.printf("Button pressed\n");
-    go_to_sleep = !go_to_sleep;
-    if(go_to_sleep == 1)
-    {
-    	go_sleep.detach();
-    	PID_Call.detach();
-    	PID_Control.set_speed(0.0);
-    }
-    else if(go_to_sleep == 0)
-    {
-    	if(!(power.battery_status()))
-    	{
-    		go_sleep.attach(&pressed_R, 30.0);
-    		PID_Control.PID_Init();
+void go_CW();
 
-    		PID_Control.set_Trgt_Angle(180.0);
+void go_CCW();
 
-    		//PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
-    		PID_Call.attach(&PID_Control, &PID::go_to_angle, PID_update_period);
-    		Orange = 0.25;
-    	}
-	}
-}
- 
-
-
+void go_home_CW();
 int main()
 {
 	pc.baud(921600);
 	Orange.period(pwm_period);
 	CSENSE.set_gain(G50); //Sets the current gain
     Motor.off();
-    Button_P.fall(&pressed_F);
-    Button_D.fall(&pressed_R);
+    Button_P.fall(&pressed_CW);
+    Button_D.fall(&pressed_CCW);
     power.battery_status();
 
     //Orange.period(0.005);
@@ -92,7 +50,7 @@ int main()
     {
         if (go_to_sleep)
         {
-            
+
             FF = 0;
             RR = 0;
             myled = 0;
@@ -112,3 +70,102 @@ int main()
         }
     }
 }
+
+
+void pressed_CW()
+{
+    pc.printf("CW pressed\n");
+    go_to_sleep = 0;
+    if(running)
+    {
+		go_sleep.detach();
+		PID_Call.detach();
+		go_home.detach();
+		set_to_sleep();
+    }
+    else
+    {
+		//nothing
+	}
+    if(go_to_sleep == 1)
+    {
+    	sleep_init();
+
+    }
+    else if(go_to_sleep == 0)
+    {
+    	if(!(power.battery_status()))
+    	{
+    		if(Accel.upright())
+    		{
+    			running = 1;
+    			Orange = 0.25;
+    			go_sleep.detach();
+    			PID_Call.detach();
+    			go_home.detach();
+    			PID_Control.STOP = 0;
+    			go_sleep.attach(&set_to_sleep, 30.0);//makes gearbox go to sleep after a timeout
+    			//30 seconds.
+    			go_CW();//makes the gearbox go CW for 10 seconds
+    			go_home.attach(&go_home_CW,10.0);
+    		}
+    	}
+	}
+}
+
+void pressed_CCW()
+{
+    pc.printf("CCW pressed\n");
+    go_to_sleep = 0;
+    if(go_to_sleep == 1)
+    {
+    	sleep_init();
+    }
+    else if(go_to_sleep == 0)
+    {
+    	if(!(power.battery_status()))
+    	{
+    		go_sleep.attach(&sleep_init, 30.0);
+    		PID_Control.PID_Init();
+
+    		PID_Control.set_Trgt_Angle(180.0);
+    		PID_Control.set_speed(90.0);
+    		PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
+    		//PID_Call.attach(&PID_Control, &PID::go_to_angle, PID_update_period);
+    		Orange = 0.25;
+    	}
+	}
+}
+
+void sleep_init()
+{
+	go_sleep.detach();
+	PID_Call.detach();
+	PID_Control.set_speed(0.0);
+	set_to_sleep();
+}
+
+void set_to_sleep()
+{
+	go_to_sleep = 1;
+	running = 0;
+}
+
+void go_CW()
+{
+
+	PID_Control.PID_Init();
+	PID_Control.set_speed(-90.0);
+	PID_Call.attach(&PID_Control, &PID::PID_Control, PID_update_period);
+
+}
+
+void go_home_CW()
+{
+	PID_Control.set_Trgt_Angle(180.0);
+	PID_Control.set_speed(-90.0);
+	PID_Call.detach();
+	PID_Control.STOP = 0;
+	PID_Call.attach(&PID_Control, &PID::Stop_At_Angle, PID_update_period);
+}
+

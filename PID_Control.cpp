@@ -14,7 +14,7 @@ PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 	Accel = &acc;
 	Kp = kp*PID_update_period;
 	Ki = ((ki*PID_update_period*625)/ERROR_BUFFER_SZ)*100000.0;
-	Kd = (kd*0.00000001)/PID_update_period;
+	Kd = (kd*0.000000000000000000000000000001)/PID_update_period;
 	Bias = bias;
 	for(int i = 0; i < ANGULAR_SPEED_SZ -1; i++)
 	{
@@ -161,15 +161,16 @@ float PID::Integrate_Error()
 float PID::Derivate_Error()
 {
 	float der_error = 0.0;
-	const int Averages = 2;
+	const int Averages = 20;
 	for(int i = 0;i < Averages; i++)
 	{
 		der_error = der_error +
-				(Error[i] - Error[i+1])/PID_update_period;
+				(Error[i] - Error[i+1]);
 	}
 	//der_error = (Error[i] - Error[i-1])/PID_update_period;
 
 	der_error = der_error/static_cast<float>(Averages);
+	der_error der_error/PID_update_period;
 	return der_error;
 }
 
@@ -195,22 +196,28 @@ void PID::PID_Control()
 	}
 	printf("Error[0] = %d ",static_cast<int>(Error[0]));
 	printf("PWM = %d  ",static_cast<int>(New_PWM*1000.0));
-	if(New_PWM > 0.0f)
+	if(!STOP)
 	{
-		printf("Motor F \n");
-		Current_PWM = New_PWM;
-		Motor->run_F(New_PWM);
+		if(New_PWM > 0.0f)
+		{
+			printf("Motor F \n");
+			Current_PWM = New_PWM;
+			Motor->run_F(New_PWM);
+		}
+		else if(New_PWM < 0.0f)
+		{
+			printf("Motor R \n");
+
+
+			Current_PWM = New_PWM;
+			temp = fabsf(New_PWM);
+			Motor->run_R(temp);
+		}
 	}
-	else if(New_PWM < 0.0f)
+	else
 	{
-		printf("Motor R \n");
-
-
-		Current_PWM = New_PWM;
-		temp = fabsf(New_PWM);
-		Motor->run_R(temp);
+		Motor->off();
 	}
-
 
 }
 
@@ -289,5 +296,20 @@ void PID::Clear_All_Buffers()
 		Angular_Spd[i] = 0.0;
 	}
 
+
+}
+
+void PID::Stop_At_Angle()
+{
+
+	if(Angle[0] < (Trgt_Angle + 5.0) && Angle[0] >(Trgt_Angle - 5.0))
+	{
+		Motor->off();
+		STOP = 1;
+	}
+	else
+	{
+		PID_Control();
+	}
 
 }

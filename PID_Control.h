@@ -8,7 +8,7 @@
 #include <math.h>
 
 const double PI= 3.14159265;
-const float R = 4.7;
+const float R = 10.0;
 const float C = 0.1;
 const float dt = PID_update_period; ////This is the discrete sample interval
 const double RC = R*C;
@@ -20,7 +20,7 @@ const int ERROR_BUFFER_SZ = 250;
 
 
 class PID
-{;p-[9]
+{
 
 private:
 	Motor_Ctrl *Motor;
@@ -38,9 +38,10 @@ private:
 	float Trgt_Ang_Spd;
 	float Current_PWM;
 	float Trgt_Angle;
+
 public:
 
-
+	bool STOP;
 	PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 			float kp, //Proportional Tuning Constant
 			float ki, //Integral Tuning Constant
@@ -139,6 +140,8 @@ public:
 	void go_to_angle();
 
 	void Clear_All_Buffers();
+
+	void Stop_At_Angle();
 };
 
 #endif

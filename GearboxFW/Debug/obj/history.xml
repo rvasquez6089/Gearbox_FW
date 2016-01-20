@@ -1,26 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\.. -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents">
-      <target file="Current_Sense..o" lastModified="1522e94d515">
-         <source file="..\..\..\Current_Sense..cpp" lastModified="151c1e420a0"/>
+   <processor signature="arm-none-eabi-g++ noversion nomachine -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=softfp -g2 -Wall -Os -fno-common -fmessage-length=0 -Wall -fno-strict-aliasing -fno-rtti -fno-exceptions -ffunction-sections -fdata-sections -std=gnu++98 -c -DTARGET_STM32F401RE -DTARGET_FF_ARDUINO -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -DTARGET_FF_MORPHO -DTARGET_CORTEX_M -D__FPU_PRESENT=1 -D__MBED__=1 -DTARGET_NUCLEO_F401RE -DTARGET_M4 -DTARGET_STM -DTARGET_STM32F4 -DMBED_BUILD_TIMESTAMP=1446577892.51 -D__CORTEX_M4 -DARM_MATH_CM4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4\TARGET_NUCLEO_F401RE -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TOOLCHAIN_GCC_ARM -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed -I..\..\..\..\..\..\..\Real Documents\Engineering Projects -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox\Gearbox_FW\mbed\TARGET_NUCLEO_F401RE\TARGET_STM\TARGET_STM32F4 -I..\..\..\..\..\..\..\Real Documents\Engineering Projects\Gearbox">
+      <target file="MMA8652.o" lastModified="1525bfa5a29">
+         <source file="..\..\..\MMA8652.cpp" lastModified="15257333521"/>
       </target>
-      <target file="MMA8652.o" lastModified="1522e975903">
-         <source file="..\..\..\MMA8652.cpp" lastModified="1522e974e3d"/>
+      <target file="Current_Sense..o" lastModified="1525bfa5716">
+         <source file="..\..\..\Current_Sense..cpp" lastModified="151bd3679df"/>
       </target>
-      <target file="PID_Control.o" lastModified="15233106f6f">
-         <source file="..\..\..\PID_Control.cpp" lastModified="1523310604f"/>
+      <target file="PID_Control.o" lastModified="1525cafa05c">
+         <source file="..\..\..\PID_Control.cpp" lastModified="1525caf928c"/>
       </target>
-      <target file="Motor.o" lastModified="1522e94daa1">
-         <source file="..\..\..\Motor.cpp" lastModified="151c1e420a0"/>
+      <target file="Motor.o" lastModified="1525bfa5ac2">
+         <source file="..\..\..\Motor.cpp" lastModified="151bd37f17d"/>
       </target>
-      <target file="main.o" lastModified="1523304eec7">
-         <source file="..\..\..\main.cpp" lastModified="1523304e52e"/>
+      <target file="Main_Funcs.o" lastModified="1525bfa5aea">
+         <source file="..\..\..\Main_Funcs.cpp" lastModified="1525bf6a1d4"/>
       </target>
-      <target file="Declarations.o" lastModified="1522e94d713">
-         <source file="..\..\..\Declarations.cpp" lastModified="151c1e420a0"/>
+      <target file="main.o" lastModified="1525cadb05a">
+         <source file="..\..\..\main.cpp" lastModified="1525cada631"/>
       </target>
-      <target file="power.o" lastModified="1522e94d7f1">
-         <source file="..\..\..\power.cpp" lastModified="151c1e420a0"/>
+      <target file="Declarations.o" lastModified="1525bfa582f">
+         <source file="..\..\..\Declarations.cpp" lastModified="151bd41ed0f"/>
+      </target>
+      <target file="power.o" lastModified="1525bfa58f4">
+         <source file="..\..\..\power.cpp" lastModified="151bd2f6b99"/>
       </target>
    </processor>
 </history>
