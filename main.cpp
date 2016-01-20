@@ -15,7 +15,7 @@ Timeout go_sleep;
 Timeout go_home;
 bool FF = 0;
 bool RR = 0;
-bool running = 0;
+bool running = gi0;
 
 PID PID_Control(Motor,CSENSE, Accel, 0.80f,0.50f,0.000000000000000001f,0.0f);
 //PID PID_Control(Motor,CSENSE, Accel, 100.0f,0.0f,0.0f,0.0f); //good
