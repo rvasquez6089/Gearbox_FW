@@ -8,7 +8,7 @@
 #include <math.h>
 
 const double PI= 3.14159265;
-const float R = 10.0;
+const float R = 4.7;
 const float C = 0.1;
 const float dt = PID_update_period; ////This is the discrete sample interval
 const double RC = R*C;

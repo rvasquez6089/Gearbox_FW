@@ -243,6 +243,9 @@
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_gpio_ex.h" lastModified="150d0b198f6">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
       </source>
+      <source file="..\..\..\PID_Control.cpp" lastModified="1526307a952">
+         <include file="..\..\..\PID_Control.h"/>
+      </source>
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_wwdg.h" lastModified="150d0b19967">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
       </source>
@@ -447,7 +450,7 @@
       <source file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_rtc_ex.h" lastModified="150d0b19936">
          <include file="..\..\..\mbed\TARGET_NUCLEO_F401RE\stm32f4xx_hal_def.h"/>
       </source>
-      <source file="..\..\..\PID_Control.h" lastModified="1525cacb1dd">
+      <source file="..\..\..\PID_Control.h" lastModified="15261b7236a">
          <include file="..\..\..\mbed\mbed.h"/>
          <include file="..\..\..\MMA8652.h"/>
          <include file="..\..\..\Current_Sense.h"/>
@@ -582,14 +585,6 @@
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\analogout_api.h"/>
       </source>
-      <source file="..\..\..\main.cpp" lastModified="1525cada631">
-         <include file="..\..\..\mbed\mbed.h"/>
-         <include file="..\..\..\Declarations.h"/>
-         <include file="..\..\..\power.h"/>
-         <include file="..\..\..\Motor.h"/>
-         <include file="..\..\..\Current_Sense.h"/>
-         <include file="..\..\..\PID_Control.h"/>
-      </source>
       <source file="..\..\..\mbed\LowPowerTimeout.h" lastModified="150d0b1965e">
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\lp_ticker_api.h"/>
@@ -623,10 +618,6 @@
       <source file="..\..\..\mbed\DigitalOut.h" lastModified="150d0b19640">
          <include file="..\..\..\mbed\platform.h"/>
          <include file="..\..\..\mbed\gpio_api.h"/>
-      </source>
-      <source file="..\..\..\power.cpp" lastModified="151bd2f6b99">
-         <include file="..\..\..\power.h"/>
-         <include file="..\..\..\Declarations.h"/>
       </source>
    </includePath>
 </dependencies>
