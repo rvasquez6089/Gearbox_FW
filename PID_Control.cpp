@@ -14,7 +14,7 @@ PID::PID(Motor_Ctrl &mtr, Current_Sense &csen, MMA8652 &acc,
 	Accel = &acc;
 	Kp = kp*PID_update_period;
 	Ki = ((ki*PID_update_period*625)/ERROR_BUFFER_SZ)*100000.0;
-	Kd = (kd*0.000000000000000000000000000001)/PID_update_period;
+	Kd = (kd*0.000000000001)/PID_update_period;
 	Bias = bias;
 	for(int i = 0; i < ANGULAR_SPEED_SZ -1; i++)
 	{
@@ -68,7 +68,7 @@ void PID::Fill_Angle_Buffer()
 void PID::Read_Angle()
 {
 	float Temp_Ang;
-	printf("Ang=%d ", static_cast<int>(Angle[0]));
+	//printf("Ang=%d ", static_cast<int>(Angle[0]));
 	for(int i = ANGLE_BUFFER_SZ - 1; i >= 1; i--)/** Shifts out the oldest data.
 		Stops at 1 so that way the 0 index is empty and ready for new data. */
 	{
@@ -94,7 +94,7 @@ void PID::Fill_Angular_Spd_Buffer()
 
 void PID::Calc_Angular_Spd()
 {
-	printf("AngSpd = %d ", static_cast<int>(Angular_Spd[0]));
+	//printf("AngSpd = %d ", static_cast<int>(Angular_Spd[0]));
 	for(int i  = ANGULAR_SPEED_SZ - 1; i >= 1; i--)
 	{
 		Angular_Spd[i] = Angular_Spd[i-1];
@@ -170,7 +170,7 @@ float PID::Derivate_Error()
 	//der_error = (Error[i] - Error[i-1])/PID_update_period;
 
 	der_error = der_error/static_cast<float>(Averages);
-	der_error der_error/PID_update_period;
+	der_error = der_error/PID_update_period;
 	return der_error;
 }
 
@@ -184,8 +184,8 @@ void PID::PID_Control()
 	float deriv = Derivate_Error();
 	New_PWM = Current_PWM + (( Kp * Error[0] +
 			Ki * intg + Kd * deriv + Bias)*PID_update_period);
-	printf("intg=%d ", static_cast<int>(intg*1000.0));
-	printf("deriv=%d ", static_cast<int>(deriv*1000.0));
+	//printf("intg=%d ", static_cast<int>(intg*1000.0));
+	//printf("deriv=%d ", static_cast<int>(deriv*1000.0));
 	if(New_PWM > 1.0f)
 	{
 		New_PWM = 1.0f;
@@ -194,19 +194,20 @@ void PID::PID_Control()
 	{
 		New_PWM = -1.0f;
 	}
-	printf("Error[0] = %d ",static_cast<int>(Error[0]));
-	printf("PWM = %d  ",static_cast<int>(New_PWM*1000.0));
+	//printf("Error[0] = %d ",static_cast<int>(Error[0]));
+	//printf("PWM = %d  ",static_cast<int>(New_PWM*1000.0));
+
 	if(!STOP)
 	{
 		if(New_PWM > 0.0f)
 		{
-			printf("Motor F \n");
+			//printf("Motor F \n");
 			Current_PWM = New_PWM;
 			Motor->run_F(New_PWM);
 		}
 		else if(New_PWM < 0.0f)
 		{
-			printf("Motor R \n");
+			//printf("Motor R \n");
 
 
 			Current_PWM = New_PWM;
